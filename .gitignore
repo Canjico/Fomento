@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+.vitest/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.DS_Store
+
+# Relatório gerado depois do commit final, incluído no pacote distribuído
+artifacts/bloco-a/run-reports/

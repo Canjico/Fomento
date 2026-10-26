@@ -1,0 +1,47 @@
+name: fomento-local
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:?DB_USER ausente}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD ausente}
+      POSTGRES_DB: ${DB_NAME:?DB_NAME ausente}
+    ports:
+      - "127.0.0.1:${DB_PORT:-54329}:5432"
+    volumes:
+      - fomento_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    networks: [fomento_internal]
+
+  postgres-test:
+    profiles: [test]
+    image: postgres:17-alpine
+    restart: "no"
+    environment:
+      POSTGRES_USER: ${DB_USER:?DB_USER ausente}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD ausente}
+      POSTGRES_DB: ${DB_TEST_NAME:?DB_TEST_NAME ausente}
+    ports:
+      - "127.0.0.1:${DB_TEST_PORT:-54330}:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    networks: [fomento_internal]
+
+volumes:
+  fomento_pgdata:
+    name: fomento_pgdata_local
+
+networks:
+  fomento_internal:
+    name: fomento_internal_local
+    driver: bridge
