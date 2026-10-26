@@ -1,0 +1,623 @@
+--- a/docs/bloco-0/00-MANIFESTO-E-FONTES.md
++++ b/docs/bloco-0/00-MANIFESTO-E-FONTES.md
+@@ -1,14 +1,14 @@
+ # 00 — Manifesto, fontes, proveniência e integridade
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+ ## 1. Objeto e escopo fechado
+ 
+-Pacote de **documentação Bloco 0** do Fomento (nome técnico) / Fomentoria (marca exibida). Versão documental **0.1**, gerada em **25/10/2026**. Não há código de aplicação, banco, scripts executáveis, migrations, containers, deploy, credenciais, conexão externa, branch, commit ou PR neste pacote. A ausência de código é **requisito**, não omissão.
++Pacote atual de **documentação do Bloco 0** do Fomento (nome técnico) / Fomentoria (marca exibida): **v0.3-R2 (26/10/2026, CORRETIVO DOCUMENTAL, NÃO APROVADO)**, derivado da v0.2-R1, por sua vez derivada da v0.1 de 25/10/2026. A versão v0.1 mencionada aqui é **histórica**, não a versão corrente. Não há código de aplicação, banco, scripts executáveis, migrations, containers, deploy, credenciais, conexão externa, branch, commit ou PR neste pacote. A ausência de código é **requisito**, não omissão.
+ 
+ ## 2. Fontes e hierarquia
+ 
+@@ -30,7 +30,7 @@
+ | `P02` | `fontes/FOMENTO_PLANO_MESTRE_LOCAL_v0.2.md` | 31,551 | `18d49c15877f6676ac12db0a0e55c0acc95f797a949c4aaa9bebad7ff6c6276b` |
+ | `P01` | `fontes/FOMENTO_PLANO_MESTRE_LOCAL_v0.1.md` | 20,121 | `286019de9e843dba86b34c6ba7e26f259a266496b134fd16331edde26456b79c` |
+ 
+-## 3. Integridade R1 dos 13 documentos complementares (v0.2)
++## 3. Registro histórico de integridade R1 (v0.2; SUPERADO por tabela R2 abaixo)
+ 
+ **Os SHA-256 da tabela antiga v0.1 ficam substituídos por estes valores da cópia corrigida v0.2.** O manifesto 00 está **deliberadamente excluído** de sua própria tabela de hashes para evitar referência circular; o SHA de 00 consta no relatório independente de integridade `corretivos/bloco-0/R1/05-EVIDENCIAS-E-INTEGRIDADE.md`.
+ 
+@@ -73,7 +73,7 @@
+ 
+ ## 8. Condição de encerramento
+ 
+-Status **PRONTO PARA AUDITORIA INDEPENDENTE**, condicionado à validação física da montagem e ressalvas registradas em `13`; **NÃO APROVADO**, sem arquitetura congelada e sem iniciar Bloco A. A auditoria independente e o gate humano são etapas posteriores.
++Status **HISTÓRICO v0.1: PRONTO PARA AUDITORIA INDEPENDENTE**, condicionado à validação física da montagem e ressalvas registradas em `13`; **NÃO APROVADO**, sem arquitetura congelada e sem iniciar Bloco A. A auditoria independente e o gate humano são etapas posteriores.
+ 
+ ## R1 — Proveniência do corretivo e condição atual (26/10/2026)
+ 
+@@ -82,3 +82,27 @@
+ - **Originais de autoridade:** `REQ` (DOCX) p.1–4 e `ID` (PDF) p.1–13 preservados por referência/hashes. P02 e P01 são fontes históricas, não contratos aprovados.
+ - **Limites:** nenhum software, database, migration, API, serviço, pagamento, envio externo, operação Git ou deploy; nenhuma reauditoria independente ou aceite humano. O resultado é **PRONTO PARA REAUDITORIA COM RESSALVAS**, não congelamento de arquitetura.
+ - **Reprodutibilidade:** compare `SHA256SUMS` lógico da tabela §3 com os bytes dos documentos, confira integridade CRC do ZIP; use `corretivos/bloco-0/R1/06-DIFF-TEXTUAL-v0.1-v0.2.diff` para reconstruir as mudanças. O SHA global do arquivo ZIP é entregue separadamente, pois não é possível embuti-lo no próprio ZIP sem circularidade.
++
++## R2 — Versão corrente, linhagem, sem autoaprovação (R1-07)
++
++**Versão corrente do pacote: v0.3-R2, 26/10/2026, documental, NÃO APROVADO.** Histórico: v0.1 gerada 25/10, auditada na auditoria v0.1; v0.2-R1 corrigida a partir da auditoria v0.1, reavaliada em R1; v0.3-R2 é a revisão delimitada dos achados R1-01 a R1-07. Fontes primárias imutáveis DOCX/PDF com hashes na §2; planos P01/P02 históricos byte a byte. **A tabela §3 acima é HISTÓRICA v0.2 e NÃO deve ser usada para validar hashes v0.3.** Somente a próxima tabela R2 valida os 13 documentos corrigidos. Os 9 relatórios R2 e diff possuem inventário externo `08-EVIDENCIAS-E-INTEGRIDADE.md`; não são auto-hashados neste manifesto para evitar dependência circular. A nova reauditoria independente R2 e o aceite humano ainda NÃO ocorreram; nenhum contrato foi congelado, Bloco A não autorizado.
++
++## R2 — SHA-256 canônico dos 13 documentos da v0.3 (exceto este manifesto)
++
++A tabela histórica §3 refere-se EXCLUSIVAMENTE à v0.2-R1. **Autoridade de integridade da versão corrente v0.3-R2 é somente esta tabela R2.** O SHA deste manifesto não consta aqui, evitando dependência circular. Os relatórios R2 e o diff são inventariados em `08-EVIDENCIAS-E-INTEGRIDADE.md`, nunca incorporados por hash neste manifesto.
++
++| Documento v0.3 | Bytes | SHA-256 |
++| --- | --- | --- |
++| `01-RASTREABILIDADE-REQUISITOS.md` | 11723 | `2a28d6565fd816fca70cbab616a616277e47f53eb762319597a5cecff3a76aed` |
++| `02-PRD-E-ESCOPO.md` | 8607 | `56541f919c145fef26394ef4229624f6b93585432581c3a6b8c224163d5fa4e0` |
++| `03-DECISOES-E-CONFLITOS.md` | 19434 | `d634a2f1451f2b6d7bb0d67f1d75aa901bad2592424c7600d7911600e270c9c5` |
++| `04-ORGANIZACOES-PERMISSOES.md` | 19981 | `fa572694b7580a2ed28f6ce6e67fe5eb1df20b3768cc90361d1a8187e31eac8d` |
++| `05-ESTADOS-EDITORIAL-E-AUDITORIA.md` | 24118 | `95c4caf401c27700634614b6c6a6a0a127347facb0477c3edbcd3c27319dcf5a` |
++| `06-ARQUITETURA-E-CONTRATOS.md` | 15694 | `eba1e2cd2e2eec448ca6cda90b235788d80a8838111550eb4a6906c704539d48` |
++| `07-MODELO-DE-DADOS-LOGICO.md` | 20831 | `7172b72b4bb11c1bfbf1ed14df9cbe30f562719532bb0bb6d02f4e0d599585f8` |
++| `08-FLUXOS-E-UX.md` | 13217 | `7bb744b2b08e85519a2c78afbb098ba4f66bd8a8f84ae434704df4c6d36f5c44` |
++| `09-PLANOS-E-BILLING.md` | 14037 | `f7ea9a4ef62d8313859988af32230d8e6c7084881dcc5a402e2681b847144018` |
++| `10-SEGURANCA-PRIVACIDADE-RISCOS.md` | 11798 | `5d74869f9f3d65f4dae2be59c05d8e7b5f2b968bb79a010e91c3182dc1e95bbd` |
++| `11-TESTES-E-GATES.md` | 35567 | `c09186764c40bc283063d4d6a8ca98d9e6439a862b5120a69606bd64ec11323a` |
++| `12-ROADMAP-REVISADO.md` | 22887 | `d304df4e2c59e587ad555b284be56faa214f93584889c3eddab8b01307c57c21` |
++| `13-AUTO-CHECAGEM-DO-PACOTE.md` | 14242 | `2ed7f2c204b770b7dc35b97b3ddf36ab0b5951ffc32ff71914e24cac93de7f06` |
+--- a/docs/bloco-0/01-RASTREABILIDADE-REQUISITOS.md
++++ b/docs/bloco-0/01-RASTREABILIDADE-REQUISITOS.md
+@@ -1,8 +1,8 @@
+ # 01 — Rastreabilidade de requisitos
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -90,3 +90,11 @@
+ | RNF06 | operação manual diária com tentativa distinta de verificação válida, cobertura por dia | SRC/SourceCheck, 05 §R1 | SRC-01..07 e semana simulada | D–F |
+ 
+ **Semântica original preservada:** quatro personas (REQ p.1 §3), dez RF (REQ p.2 §5), seis RNFs (REQ p.2–3 §6), sete fases (REQ p.3–4 §9), aplicativo nativo e assinatura eletrônica pós-fase 7, identidade visual do ID p.2–13. `AUTH-11` agora especificado em `04/11`, `PERF-01` em `11`, `ENT-01..03` em `09/11`; IDs não significam `PASS`. D-02/D-26, D-11 e demais decisões continuam pendentes segundo matriz única de `03`.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — RNF01 e RNF06 com oráculos verificáveis (R1-01/R1-05)
++
++**RNF01:** teste `PERF-01` em `11` §R2 mede `catalog_ready` (linhas corretas e interativas); P95 ≤2s por cenário é proposta a ratificar antes E, não requisito de LCP. Cabeçalho/LCP a 700ms e lista a 3000ms = FAIL. **RNF06:** separar `source_coverage(d)` e `edital_coverage(d)` conforme `05` §R2, com verificação por `Edital.id`; PASS somente 100% nos dois universos com evidência. Resultado da simulação em `corretivos/bloco-0/R2/04-MATRIZ-RNF06.md`, não prova de operação real.
+--- a/docs/bloco-0/02-PRD-E-ESCOPO.md
++++ b/docs/bloco-0/02-PRD-E-ESCOPO.md
+@@ -1,8 +1,8 @@
+ # 02 — PRD e escopo
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -77,3 +77,7 @@
+ Uma ficha publicada referencia a revisão editorial aprovada; preparação de retificação não afeta o que o visitante encontra. Favoritos são pessoais (RF04), enquanto o modelo de entitlement comercial depende de decisão D-02/D-26 — não transformar automaticamente plano Assessoria em listas compartilhadas por empresa. Recomendação não equivale à elegibilidade oficial. A evolução H→L→M está desenhada em `06/09/12` sem ativação de pagamentos reais nem cobranças externas.
+ 
+ **Sem ampliação silenciosa:** equipe editorial de exceção, política de retenção, rate limit, métricas de performance e atendimento de checagem diária são propostas aguardando deliberação por gate. O PRD não declara nenhuma dessas políticas aprovada. Os sete estágios originais de negócio e todas as funcionalidades pós-fase 7 permanecem, sem antecipação de implementação.
++
++## R2 — Coerência do checkout (R1-06)
++
++RF05 no DOCX pressupõe dados de empresa (razão social, CNPJ, setor, estágio) durante checkout. Alternativa A preserva fluxo empresarial com criação/vínculo de organização antes da contratação; B estende produto a pessoa física e requer deliberação humana explícita antes de modelar UX/fiscal. **Nenhuma tela pessoal paga pode ser presumida pelo implementador**. `BillingSubject` tipado permanece proposta condicional de arquitetura; favoritar gratuitamente sem empresa não implica poder contratar Pro pessoal. Ver `09` §R2 e relatório `05-CHECKOUT-ALTERNATIVAS.md`.
+--- a/docs/bloco-0/03-DECISOES-E-CONFLITOS.md
++++ b/docs/bloco-0/03-DECISOES-E-CONFLITOS.md
+@@ -1,8 +1,8 @@
+ # 03 — Registro de decisões e conflitos
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -99,3 +99,15 @@
+ 2. **Candidatas fixas para A por desenho:** D-01, D-08 e D-23/D-09 (governança). D-03 e D-22 são obrigatórias em A **se** User/Organization ou PII estiverem nas migrations iniciais; D-06 se modelagem editorial já existir. A separação de papéis D-07 fecha antes de C; marca/fonte D-14/D-27 antes de B.
+ 3. `07` e `12` devem apontar para a tabela acima, jamais replicar gates divergentes. No plano curto de A listar decisões resolvidas, migrations e evidência de aprovação; sem isso, A fica bloqueado. **Nenhuma decisão foi ratificada neste R1.**
+ 4. D-02/D-26 possuem decisão combinada: o direito comercial e o domínio pessoal não podem ser aprovados isoladamente; resolver antes de qualquer schema que imponha titularidade. As alternativas completas estão em `04` e `09`.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — D-02 e D-26: checkout original e extensão não ratificada (R1-06)
++
++A recomendação histórica R1 de `BillingSubject` tipado não é aprovação de venda a pessoa física. **Alternativa A (aderente a REQ §4.4):** apenas checkout empresarial com CNPJ e vinculação autorizada; conta pessoal sem empresa usa Gratuito. **Alternativa B (extensão):** checkout pessoal/empresarial com dados tributários e direitos tipados; exige mudança de escopo de negócio e análise LGPD/fiscal. Fav. RF04 continuam pessoalmente pertencentes ao usuário; escopo do benefício requer D-02. **Último gate:** D-02 antes de H e de migrations pertinentes; D-26 antes de criar Subscription/BillingSubject ou rotas de checkout, no máximo antes L/M (antecipar apenas se migrations de A/G o exigirem). **Status de ambas: PENDENTE.** Matriz única D-01–D-28 permanece authority de gates; qualquer deslocamento exigirá mudança formal nessa matriz.
++
++## R2 — Classificação dos gates após correções delimitadas
++
++O índice **normativo** de D-01–D-28 permanece a matriz única §"Matriz de autoridade D-01–D-28 (R1)" acima. A correção R2 **não aprovou** e **não renumerou** decisões. Casos específicos: D-11 exige capacidade de verificar **fontes e editais** antes do Gate MVP1; D-02 antes de esquema de quota no H, D-26 antes da primeira Subscription e rotas de checkout em L/M, adiantando caso alguma migration anterior contenha seus campos; D-12 determina temporalidade, D-23 define protocolo de aceite, D-09 preserva auditoria independente. Os contratos R2 em `05`,`09`,`11` e relatórios anexos explicitam alternativas sem substituir deliberação. Se a futura implementação variar o conteúdo da migration A, deve recalcular o gate exato e obter aceite específico antes de executar.
+--- a/docs/bloco-0/04-ORGANIZACOES-PERMISSOES.md
++++ b/docs/bloco-0/04-ORGANIZACOES-PERMISSOES.md
+@@ -1,8 +1,8 @@
+ # 04 — Organizações, permissões e ownership
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -150,3 +150,15 @@
+ ## R1 — AUD-07: AUTH-11 anti-enumeração
+ 
+ **Pré-condições C/G:** usuários de teste fictícios `existente@example.test` / `ausente@example.test`, convites fictícios válido/inexistente/expirado, relógio fixo, logs coletados redigidos. **WHEN:** executar mesmos POST de recuperação/invite 20 vezes por classe com IP e device controlados; comparar código, corpo, headers e distribuição de latência sob mesmas condições (timing aproximado, não igualdade impossível). **THEN:** resposta pública genérica para conta/convite existente e não existente sempre que a operação permitir, sem revelar existência; aceite de convite com token deve distinguir inválido/expirado apenas quando detentor do token legitimamente o apresenta; sem e-mails reais. Limitação de tentativas: **PROPOSTA 5 tentativas/15 min/identificador IP+account**, não aprovada; ratificar antes C/G, testar 429 coerente para classes de conta sem vazar. Evidência futura: requests/responses normalizados, histogramas de latência, auditoria sanitizada sem e-mails/tokens literais. Não inferir dado sensível a partir do logs. Teste AUTH-11 executável apenas quando o endpoint existir.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — Conexão RBAC e AUTH-11 (R1-04)
++
++O caso `AUTH-11` é definido exclusivamente no `11` §R2, com fase A de enumeração em identidades/convites e fase B de rate limit sob buckets novos. Membership revogado não altera resposta pública de recuperação para revelar conta, mas ações de aceite com token válido exigem verificação server-side de sujeito, escopo e validade. Rate limit `5/15min` é **PROPOSTA NÃO APROVADA**; nenhum endpoint existe nesta etapa.
++
++## R2 — Autorização das duas jornadas de cobrança (R1-06)
++
++Em contratação organizacional exigir `can_manage_billing(actor, org_id)` no servidor, membership ativo no início, na criação de tentativa e antes de mudança de plano; revogação durante checkout invalida a operação autorizativa pendente. Em alternativa pessoal (APENAS SE APROVADA), `billing_subject.person_user_id` deve ser igual ao sujeito autenticado, sem direito implícito a dados das organizações. U em A Pro/B Free nunca usa benefício A em B; favoritos privados sobrevivem à revogação sem metadados da organização. Ver matriz J01–J10 em `05-CHECKOUT-ALTERNATIVAS.md`.
+--- a/docs/bloco-0/05-ESTADOS-EDITORIAL-E-AUDITORIA.md
++++ b/docs/bloco-0/05-ESTADOS-EDITORIAL-E-AUDITORIA.md
+@@ -1,8 +1,8 @@
+ # 05 — Estados, prazos, proveniência e auditoria
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -87,11 +87,9 @@
+ | 9 arquivar | publisher | justificativa e versão | evento archive | editar arquivo sem restore |
+ | 10 consultar histórico | papel autorizado | minimização de PII | audit-read opcional | usuário comum acessa histórico privado |
+ 
+-## 7. Catálogo mínimo de testes conceituais
++## 7. Referência de testes — R2 canônico
+ 
+-- `EDT-01` draft não aparece na lista; `EDT-02` só versão publicada acessível; `EDT-03` rejeição preserva evidências; `EDT-04` duas revisões concorrentes não duplicam publicação; `EDT-05` restoring version gera nova revisão; `EDT-06` permissão separada; `EDT-07` versão publicada inalterada durante retificação; `EDT-08` apagar/corrigir PII não reescreve histórico operacional sem trilha.
+-- `TIM-01..07` definidos na tabela temporal acima; `SRC-01` URL quebrada, `SRC-02` domínio alterado, `SRC-03` source-check falha e mantém estado histórico, `DED-01` duplicidade suspeita não auto-funde, `DED-02` editais distintos com mesmo título não são colapsados.
+-- Todos os testes são especificações futuras, **não executados**.
++Todos os IDs de testes (`EDT-*`, `TIM-*`, `SRC-*`, `DED-*`, `AUTH-*`, `BIL-*`, `ENT-*`, `PERF-*`, `PRIV-*`, `LOG-*`) têm **uma única autoridade normativa**: o catálogo do documento `11-TESTES-E-GATES.md`, seção **R2 — Catálogo canônico**. Este documento descreve regras do domínio, não redeclara a semântica dos casos. Identificadores antigos que colidiam estão preservados no mapa histórico daquele catálogo. Os cenários históricos R1 a seguir são **obsoletos como definição de ID** e não podem ser usados para aceitar um gate.
+ 
+ ## R1 — AUD-03: instantâneo público transacional e imutável (D-06 PENDENTE)
+ 
+@@ -124,10 +122,10 @@
+ - **Janela PROPOSTA:** dia civil `America/Sao_Paulo` de 00:00 a 23:59:59; tentativa concluída registrada dentro dessa janela (sem inventar timezone da instituição do edital). O proprietário deve ratificar horário de corte e staffing no Bloco D.
+ - **Operador:** responsável operacional nominal **PENDENTE** (cargo sugerido editor de dados); substituto **PENDENTE**; escala obrigatória inclui sábados/domingos/feriados ou registro explícito de incapacidade. Sem escala = risco de não cumprir RNF.
+ - **Evidência por fonte/edital:** `check_id,source_id,edital_id?,started_at,completed_at?,actor_id,method=manual,link_original,evidence_digest,result=verified_no_change|verified_changed|unavailable|invalid_link|inconclusive,observed_revision?,follow_up_at?,correlation_id`; não gravar cópia confidencial de terceiros indevidamente. `verified_*` apenas se conteúdo comparável foi efetivamente inspecionado; HTTP inacessível é tentativa, não verificação concluída.
+-- **Métrica:** `cobertura efetiva(d)=#fontes em U(d) com checagem verified_* concluída até corte / #fontes U(d)`; `taxa tentativas(d)=#fontes tentadas / #fontes U(d)`; `pendentes=U−concluídas efetivamente`; `age` = horas desde última checagem efetiva; falhas por resultado; `revisão necessária` conta editais com divergência não decidida. Guardar numerador/denominador/versionamento de U.
++- **Métrica HISTÓRICA SUPERADA POR R2 (apenas fontes):** `cobertura efetiva(d)=#fontes em U(d) com checagem verified_* concluída até corte / #fontes U(d)`; `taxa tentativas(d)=#fontes tentadas / #fontes U(d)`; `pendentes=U−concluídas efetivamente`; `age` = horas desde última checagem efetiva; falhas por resultado; `revisão necessária` conta editais com divergência não decidida. Guardar numerador/denominador/versionamento de U.
+ - **Processo e contingência:** fila diária atribuída, dupla verificação apenas para mudança crítica, fonte indisponível→tentar via canal oficial alternativo sem scraping, agendar retorno e escalar ao responsável; divergência de prazo→criar revisão editorial e sinalizar verificação pendente sem publicar automaticamente; link inválido→marca e tarefa manual; sobrecarga/sem operador→registrar **RNF06 NÃO CUMPRIDO**, escalar, não simular check; informar ao público a data real da última verificação, com aviso `fonte não verificada recentemente`.
+ 
+-### Simulação de sete dias — três fontes ativas fixas (dados FICTÍCIOS)
++### Exemplo histórico R1 (somente fontes; **INSUFICIENTE para RNF06**; substituído pela simulação R2)
+ 
+ | Dia em America/Sao_Paulo | A | B | C | Verificadas/U | Tentadas/U | Pendências e evento |
+ |---|---|---|---|---|---|---|
+@@ -140,3 +138,30 @@
+ | dom 25/10 | verificada | verificada | verificada | 3/3 = 100% | 3/3 | cobertura semanal efetiva = 19/21 = **90,48%** |
+ 
+ **Critério proposto:** exigir 100% de verificações efetivas por dia para afirmar cumprimento literal. Nos dias 20 e 23 o RNF06 **FALHA**, apesar de tentativas honestas. Se a equipe não puder operar no fim de semana, deve declarar conflito e solicitar mudança humana do requisito/estratégia, nunca tratá-lo como exceção automática. Casos `SRC-01..07` são planejados; nenhuma rotina foi executada.
++
++## R2 — Contrato canônico de cobertura por fonte e edital (R1-01)
++
++**PROPOSTA R2; RNF06 original REQ §6.** Define-se por dia civil `d` no fuso `America/Sao_Paulo` (`00:00:00` inclusivo até `00:00:00` do dia seguinte exclusivo), com corte no final da janela. Hora de verificação gravada em UTC, exibida no fuso do relatório. Horário/capacidade/cargo precisam de aceite em D (D-11). **Nenhuma checagem real ocorreu.**
++
++**Universos versionados:** `F(d)` = todas as fontes oficiais ativas acompanhadas em qualquer instante antes do corte, incluindo indisponíveis, mais fontes vinculadas a editais monitorados; exclusão apenas por decisão registrada previamente ao início da janela, sem retirada retroativa. `E(d)` = cada `Edital.id` publicado com acompanhamento vigente (inclusive já encerrado se ainda monitorado), mais editais ingressados até o corte; excluem-se somente editais formalmente arquivados e dispensados de acompanhamento por decisão auditada anterior à janela. Revisão em andamento não remove edital. Se edital for incluído no decorrer do dia, a obrigação começa no instante de ingresso e deve ser concluída até o corte; registrar `eligible_from` para reproduzir. Editais com múltiplas fontes contam **uma única vez** em `E(d)`.
++
++**Fonte→edital:** `SourceReference(edital_id,source_id,role=primary|secondary, valid_from/to, source_official_evidence)`. Exigir uma fonte oficial primária por edital monitorado (ou exceção temporária `review_required`, bloqueando publicação conforme D-04), e permitir secundárias. Verificação de fonte só atesta a checagem de conteúdo editorial/institucional e disponibilidade da fonte segundo seu protocolo; **não** implica conclusão dos editais relacionados. Para cada edital, registrar `EditalSourceCheck(edital_id, source_id, evidence_id, examined_fields, compared_revision_id, outcome, started_at, completed_at, actor_id, correlation_id, is_effective)`; a conclusão exige conferência explícita de dados da oportunidade e sua situação atual em fonte oficial. Um mesmo documento oficial consolidado pode suportar vários editais somente quando evidencia, de forma individual identificável, cada `Edital.id`, seus dados relevantes e a comparação realizada; gerar `check_id` e resultado por edital, não fan-out automático da visita à fonte. Múltiplas fontes não elevam contagem além de 1 por edital/dia.
++
++**Métricas independentes, por dia e janela (conjuntos deduplicados):**
++
++| Métrica | Fórmula exata | Falha/observação |
++|---|---|---|
++| `source_coverage(d)` | `count(distinct source_id em F(d) com check efetivo até corte) / \|F(d)\|` | `verified_no_change`/`verified_changed` com evidência; HTTP 200 ou `unavailable` não são conclusão |
++| `edital_coverage(d)` | `count(distinct edital_id em E(d) com check efetivo até corte) / \|E(d)\|` | verificação de página genérica não equivale a conferir edital; divergência documentada pode ser `verified_changed` com revisão em aberto |
++| `source_attempt_rate(d)` | `fontes distintas com qualquer tentativa registrada no dia / \|F(d)\|` | tentativas incompletas entram aqui, não em coverage |
++| `edital_attempt_rate(d)` | `editais distintos com tentativa individual registrada no dia / \|E(d)\|` | checagem de fonte não cria tentativa fictícia por edital |
++| `source_overdue_count(d)` | `\|F(d)\| − fontes efetivamente verificadas até corte` | indicador inteiro; indisponibilidade soma pendência |
++| `edital_overdue_count(d)` | `\|E(d)\| − editais efetivamente verificados até corte` | idem; jamais deduzir do total de fontes |
++
++**Denominador zero:** apresentar `N/A (0 elegíveis)` para a métrica respectiva, armazenar prova do universo vazio e não afirmar PASS sem justificar ausência de obrigações; universo inteiro vazio requer auditoria humana da configuração. Falha ou atraso após corte não contam retroativamente, mesmo quando resolvidos no dia seguinte. Não reduzir os denominadores em finais de semana e feriados; ausência de substituto gera FAIL e escalonamento. Registro de evidência deve indicar ator, captura/consulta oficial com hash ou referência verificável, fields verificados, resultado e datas, sem armazenar material de terceiro sem base. `review_required`, fonte `unavailable`, erro de link e tentativa inconclusiva **não contam conclusão** até evidência individual adequada.
++
++**Regra operacional para cada dia elegível:** `PASS` somente se `source_coverage=100%` **e** `edital_coverage=100%`, com evidências e até o corte, sem falsear dados; `FAIL` quando qualquer obrigação vencida não for concluída; `NÃO VERIFICADO` quando registros/universos faltarem ou não houver auditoria de evidência suficiente (não inferir PASS). A conformidade global requer todos os dias da janela acompanhada em PASS. O MVP manual permanece `CONFLITO` com a disponibilidade de equipe D-11: indicar responsável, substituto, plantões e comunicação pública da última checagem por edital antes de declarar que o RNF foi atendido.
++
++## R2 — Resultado dos sete dias por dois universos (R1-01)
++
++A simulação normativa usa três fontes A/B/C e seis editais A1/A2/B1/B2/C1/C2, todos fictícios. Fonte A completa com A2 pendente em 03/11 prova RNF06 FAIL. Totais fontes `19/21=90,48%` e editais `37/42=88,10%` **não são o mesmo indicador**. Tabela diária com tentativas, overdue e eventos está em `corretivos/bloco-0/R2/04-MATRIZ-RNF06.md`, incorporada como evidência; a autoridade sobre fórmulas e regras de corte está nesta seção R2. Dia com fonte 100% e edital <100% não é PASS; fim de semana sem operador = FAIL. Dados apenas simulados.
+--- a/docs/bloco-0/06-ARQUITETURA-E-CONTRATOS.md
++++ b/docs/bloco-0/06-ARQUITETURA-E-CONTRATOS.md
+@@ -1,8 +1,8 @@
+ # 06 — Arquitetura proposta e contratos dos módulos
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -114,3 +114,7 @@
+ ### Protocolo de evolução de portas
+ 
+ Cada porta especifica `actor/context`, `version`, `policy`, `idempotency_key`, `correlation_id`, enum de falhas e permissões. Evitar chamadas cíclicas: `IAM/ORG → ENT` **não**; `ENT → ORG` para validar escopo através de porta de autorização, `FAV → ENT`, `ENT` nunca chama `FAV` para conceder, `BILL → ENT` somente publica evento confirmado, `ADM → CAT` para comando autorizado, `CAT → SRC` somente leitura de proveniência ou materialização de metadados. Outbox/inbox é conceito futuro, não job instalado. Contratos R1 exigem testes `AUTH-01/03`, `FAV-01..05`, `ENT-01..03`, `BIL-01..05`, `EDT-04/07`, `NTF-01..06`, `MOD-01..03`.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
+--- a/docs/bloco-0/07-MODELO-DE-DADOS-LOGICO.md
++++ b/docs/bloco-0/07-MODELO-DE-DADOS-LOGICO.md
+@@ -1,8 +1,8 @@
+ # 07 — Modelo de dados conceitual e lógico
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -145,3 +145,7 @@
+ | Edital gerenciado B2B | `ManagedCall` ID independente, associação explícita com `Edital` sem compartilhar inscrições |
+ 
+ **Índices adicionais candidatos:** unicidade por contexto NULL da tabela acima; `EditalRevision(edital_id,revision_number)`; `Edital(published_revision_id,id)`; projeção pública `(revision_id,filters)`; `NotificationDelivery` chave idempotente tipada; `BillingSubject(type,personal_user_id|organization_id)` com unicidade por sujeito. Índices precisam de validação futura, não foram gerados.
++
++## R2 — Relações de cobertura diária (R1-01)
++
++`SourceCheck` e `EditalSourceCheck` são eventos lógicos distintos: primeira chave lógica `(source_id, day, check_id)`; segunda `(edital_id, source_id, day, evidence_id)` com `completed_at`, `effective`, `checked_fields`, `compared_published_revision_id`. `SourceReference(edital_id,source_id,role,valid_from,valid_to)` define vínculos fonte primária/secundária; `DailyMonitorUniverse(day, kind=SOURCE|EDITAL, resource_id, eligible_from, exclusion_decision_id?, universe_revision)` congela denominadores ao corte. Não apagar evento de erro e não contar check de source como check de todos os editais. Duas fontes para um edital permitem múltiplas evidências, mas no numerador diário contar apenas `Edital.id` distinto efetivamente concluído. Índice conceitual `resource_id+day+effective`, vínculo FK para `EditalRevision` observado (não criar migrations).
+--- a/docs/bloco-0/08-FLUXOS-E-UX.md
++++ b/docs/bloco-0/08-FLUXOS-E-UX.md
+@@ -1,8 +1,8 @@
+ # 08 — Fluxos, navegação, wireframes e identidade visual
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -123,3 +123,7 @@
+ - **Estados de falha:** `sessão revogada`, `empresa sem autorização`, `cota esgotada`, `revisão desatualizada`, `fonte não checada hoje`, `link indisponível` com texto e ícone, nunca só cor; telas mobile preservam coluna principal de lista em linhas com informações progressivamente empilhadas.
+ 
+ **Acessibilidade:** foco visível, heading estruturado, nome de controles, contraste a ser medido com componentes reais, teclado de ponta a ponta, sem confundir visual da campanha do PDF com wireframe web. Anek Tamil e marca são fontes visuais, não autorização de uso de fonte web nem a11y aprovada. Casos de aceite `UX-R1-01..06` referenciam contratos de `04/05/09`.
++
++## R2 — Jornada de contratação alternativa (R1-06)
++
++**A (original, padrão documental para UX até deliberação):** `Planos → selecionar Pro/Assessoria → identificar Organization e papel financeiro → razão social/CNPJ/setor/estágio → simulador futuro M → confirmação validada → direitos ENT`. Usuário sem empresa mantém Free e recebe opção de criar/vincular empresa, sem checkout pago imediato. **B (extensão, NÃO APROVADA):** bifurcação explicitamente rotulada `Pessoal / Empresa` antes do cadastro; pessoal solicita dados adequados legalmente, nunca CNPJ inventado, e não herda direitos para organizações. Estados `sem autorização`, `membership revogado`, `sem confirmação`, `cota excedida`, `cancelamento` e `downgrade` precisam de cópias legíveis. Dez jornadas no relatório `05-CHECKOUT-ALTERNATIVAS.md`.
+--- a/docs/bloco-0/09-PLANOS-E-BILLING.md
++++ b/docs/bloco-0/09-PLANOS-E-BILLING.md
+@@ -1,8 +1,8 @@
+ # 09 — Planos, entitlements e cobrança futura local
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -103,3 +103,11 @@
+ **Casos conceituais:** `ENT-01` GIVEN usuário Free com dois SavedEdital WHEN duas inclusões paralelas para editais distintos THEN contagem final exatamente 3, uma rejeitada `CONFLICT_QUOTA`, replay não duplica; `ENT-02` GIVEN U membro ativo A Pro empresarial hipotético e B Free WHEN troca contexto THEN nunca herda A em B nem favorito de outro usuário (a política pessoal global segue Free se não houver benefício pessoal); `ENT-03` GIVEN seleção Pro via UI sem confirmação BILL WHEN salvar quarto favorito THEN negar; após simulação validada M e sujeito de benefício correto, permitir só no escopo aprovado; replay do evento não cria segunda concessão. Testes FUTUROS, sem execução nesta fase.
+ 
+ **Downgrade:** manter itens pessoalmente pertencentes ao usuário para leitura, não permitir novas inclusões acima da cota e propor controle de remoção/regularização sem deleção automática. Definir transição de Assessorias com membros >5, convites pendentes, prorrata/trial e grace na D-16/D-21 antes L/N; não prometer serviço humano ou recorrência real sem contrato. Todos os valores permanecem referências comerciais do REQ.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — Checkout empresarial original versus pessoal proposto (R1-06)
++
++**Fonte original:** REQ p.2 §4.4 exige `Plano → razão social/CNPJ/setor/estágio da empresa → cartão/Pix/boleto → confirmação`. **Alternativa A** mantém assinatura somente de organização, sujeito não nulo, sem Pro para conta sem empresa; proprietário financeiro pode contratar no contexto autorizado. **Alternativa B** acrescenta checkout pessoal por `BillingSubject(PERSON)` com campos/obrigações fiscais próprios: é **EXTENSÃO DO ORIGINAL**, exige aceite expresso D-26 e impacto LGPD D-22 antes G/L/M. Ambas mantêm favoritos pessoais RF04 e proíbem herança automática do benefício A para B. **Não presumir assinatura pessoal na UX ou no banco**. Matriz das dez jornadas e impactos é parte do contrato proposto no relatório `corretivos/bloco-0/R2/05-CHECKOUT-ALTERNATIVAS.md`. Até escolha, nenhuma subscription migration que fixe owner é autorizável. D-02/D-26 permanecem **PENDENTES**, sem checkout real.
+--- a/docs/bloco-0/10-SEGURANCA-PRIVACIDADE-RISCOS.md
++++ b/docs/bloco-0/10-SEGURANCA-PRIVACIDADE-RISCOS.md
+@@ -1,8 +1,8 @@
+ # 10 — Threat model, segurança, privacidade e riscos
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -84,3 +84,11 @@
+ | Leitura/export de AuditEvent excessiva (AUD-12) | audit_reader read-only por escopo, mask, audit de leitura/export, dual control | AUTH-12..15; C/D/O | Médio até política de retenção e testes |
+ 
+ **LGPD:** append-only de eventos de negócio não implica retenção eterna de PII; proposta separar identificador técnico e payload pessoal com política de minimização/pseudonimização/tombstone e expurgo permitido sob base legal e prazo ainda a serem ratificados. Hash de log com PII não é anonimização jurídica automática. **RNF02 = disponibilidade 99,5% de produção**, não certificável localmente; o identificador antigo divergente foi descontinuado, sem criar segundo teste. Nenhuma conformidade ou proteção dinâmica foi testada neste R1.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — Ameaça de enumeração com experimento isolado (R1-04)
++
++`AUTH-11` no `11` §R2 usa duas fases independentes. A amostragem de tempos sem rate limit contaminante não é justificativa para remover limitação em produção; proteção real deve ficar ativa. A fase B testa 429, resets, chave de limite e não revelação. Nenhuma política de rate limit, métrica estatística ou conformidade foi aprovada; roteiros são **NÃO EXECUTADOS**.
+--- a/docs/bloco-0/11-TESTES-E-GATES.md
++++ b/docs/bloco-0/11-TESTES-E-GATES.md
+@@ -1,8 +1,8 @@
+ # 11 — Estratégia de testes, critérios por bloco e gates
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+-
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -77,33 +77,19 @@
+ 
+ ## R1 — AUD-07/08/09/10: cenários operacionais adicionais NÃO EXECUTADOS
+ 
+-### AUTH-11 — enumeração de conta/convite (gate C/G)
++### AUTH-11 — REGISTRO HISTÓRICO R1; substituído pelo protocolo R2 de duas fases
+ 
+ **GIVEN** base isolada fictícia com usuário `exists@example.test`, endereço inexistente, convite ativo, inexistente e expirado, relógio, conexão e IP de teste controlados. **WHEN** repetir 20 vezes cada classe nas rotas futuras de recuperação e solicitação/aceite de convite, variando token válido/inválido, e depois simular taxa excedida sob configuração ratificada. **THEN** respostas públicas não revelam existência de conta/convite quando pertinente; erros de token apresentados apenas ao portador legítimo; rate limiting neutro ao estado da conta; distribuições de tempo comparadas sob condições iguais, sem limiar de diferença aprovado inventado. A configuração candidata `5/15 minutos` deve ser ratificada antes C/G. **Evidências futuras:** request/response redigido, histogramas e logs auditados sem PII/token. `PASS` depende de endpoint real futuro, não deste relatório.
+ 
+-### Dataset Gate MVP 1 — mínimo não reduzido
+-
+-**PROPOSTA:** 10 editais fictícios com fonte de teste `*.example.test`, identidade oficial explicitamente sintética, 8 publicados/um rascunho/uma revisão rejeitada. Entre publicados: E1 aberto, E2 encerrado, E3 suspenso, E4 prorrogado mas aberto, E5 prazo desconhecido, E6 inscrições futuras, E7 somente data com timezone declarado, E8 encerramento exato `23:59:59` de data indicada (somente se fonte teste expressa essa hora). Caso `suspensão revertida` é nova revisão/evento E3; retificação ainda não publicada em E4 mantém snapshot anterior; E1 e E7 exercitam virada de timezone via relógio injetado. As 10 fixtures cumprem no mínimo cinco publicados distintos e um rascunho oculto. Inclua versões, hashes/snapshot, check de fonte, papéis editor/reviewer/publisher e expected policy revision em cada registro.
+-
+-| Caso | GIVEN / WHEN | THEN (invariante e evidência futura) |
+-|---|---|---|
+-| `EDT-04` | draft sobre E4 publicado; editar valor/docs/prazo sem aprovar | GET lista/detalhe continuam com mesma revision/digest anterior; diff de snapshots prova ausência de vazamento |
+-| `EDT-07` | dois publishers têm expectedVersion igual; ambos submetem revisão aprovada | exatamente um commit, outro 409; um `RevisionPublished` e ponteiro único; logs/estado DB |
+-| `EDT-08` | revisor rejeita revisão candidata de E8 | público continua estável; decisão interna imutável |
+-| `EDT-09` | restaurar E1 ao conteúdo antigo | gerar nova revisão aprovada que referencia restauração; original imutável |
+-| `TIM-06` | E7 date-only, comparar instantes antes/depois da data e timezone IANA declarados | nunca inventar horário; status `incerto` se precisão insuficiente; documentação dos instantes de teste |
+-| `TIM-07` | E8 no segundo imediatamente anterior, instante exato e posterior ao end instant UTC derivado | status usa definição de inclusividade aprovada e muda no limite correto |
+-| `TIM-08` | E6 antes do início; E3 suspenso; E4 prorrogado | E6 `a iniciar`, E3 `suspenso` prevalece sobre aberto, E4 mostra fase + indicador de prorrogação |
+-| `TIM-09` | E3 suspensão revertida por decisão autorizada | fase recalculada sem histórico apagado |
+-| `SRC-06` | fonte B indisponível, último prazo conhecido | exibir falha de verificação e prazo não revalidado; não passar a concluído |
+-| `ENT-01` | conta FREE 2/3; duas saves concorrentes | uma inclusão, uma recusa; 3/3 DB |
+-| `NTF-01` | consultor U em A/B, mesmo evento e versão, consentimentos válidos | duas deliveries legítimas de contexto; replay em A não duplica A |
+-
+-A evidência do Gate MVP 1 precisa incluir: comandos futuros com exit code; versão das dependências; dados fictícios/seed reprodutível; JSON de instantes/timezones; HAR/redacted screenshots desktop+mobile; traces Playwright; banco de teste isolado com comparação de `published_revision_id` antes/depois; logs de permissão 401/403 e concorrência 409; resultados pass/fail/skip; acessibilidade teclado e scanner automatizado com auditoria manual. Não executar nada agora.
+-
+-### PERF-01 — benchmark objetivo proposto para RNF01
+-
+-**ORIGINAL:** listagem <=2s com <=5.000 editais ativos (REQ p.3 §6), sem métrica/percentil. **PROPOSTA para ratificação antes E:** tomar **LCP P95 <= 2.000 ms** como métrica primária da navegação **cold-cache** na página 1 em navegador real; registrar também TTFB P50/P95/P99, DOMContentLoaded, CLS, tempos SQL e total de bytes. LCP não foi exigido nominalmente pelo DOCX; se não for adequada ao objetivo, ratificar alternativa `navigationStart → renderização visível de linhas` com instrumento documentado antes do benchmark.
++### Dataset Gate MVP 1 — REGISTRO HISTÓRICO R1, SUPERADO
++
++O inventário de “dez editais” na v0.2 contava uma revisão rejeitada como se fosse edital. **Não utilizar para gates.** A seção canônica R2 deste documento e o relatório `03-FIXTURES-MVP1.md` definem E1–E10 como identidades distintas e revisões como entidades dependentes.
++
++Os IDs EDT/TIM nesta seção histórica foram remapeados no catálogo R2; nenhuma redefinição antiga aqui é normativa.
++
++### PERF-01 — REGISTRO HISTÓRICO R1; LCP primário foi substituído por métrica de lista pronta em R2
++
++**ORIGINAL:** listagem <=2s com <=5.000 editais ativos (REQ p.3 §6), sem métrica/percentil. **PROPOSTA HISTÓRICA R1 SUPERADA, NÃO NORMATIVA:** tomar **LCP P95 <= 2.000 ms** como métrica primária da navegação **cold-cache** na página 1 em navegador real; registrar também TTFB P50/P95/P99, DOMContentLoaded, CLS, tempos SQL e total de bytes. LCP não foi exigido nominalmente pelo DOCX; se não for adequada ao objetivo, ratificar alternativa `navigationStart → renderização visível de linhas` com instrumento documentado antes do benchmark.
+ 
+ - Ambiente: estação isolada documentada com CPU modelo/cores, memória, SSD, SO, navegador e versões Node/PG/framework; escolher hardware de referência antes E, não declarar arbitrariamente um valor aprovado. Registrar limites cgroup/CPU throttle e resolução viewport `1440×900` e `390×844`.
+ - Base: **5.000 editais ativos/publicados**, pelo menos 20 instituições, 12 setores, 6 estágios, 5 modalidades e distribuição regional e de prazo incluindo nulos, fechados, suspensos, datas-limite. Seeds determinísticas com digest e índice SQL planejado/EXPLAIN futuro.
+@@ -113,3 +99,123 @@
+ - Comandos **futuros exemplificativos, NÃO EXECUTÁVEIS nesta fase sem scripts reais:** `npm run bench:seed -- --count=5000` e `npm run bench:public -- --cold --runs=30 --concurrency=10`. São contratos de CLI desejados, **não scripts existentes**; registrar `NÃO EXECUTADO` até bloco E/V.
+ 
+ **RNF02:** disponibilidade >=99,5% é indicador de produção, **NÃO VERIFICÁVEL** por este benchmark local. `RNF06`: a rotina diária do documento `05` também não é certificada por testes conceituais.
++
++## R2 — Catálogo canônico de testes e equivalências (R1-02)
++
++### R2 — Catálogo canônico, autoridade exclusiva (R1-02)
++
++**ÚNICA DEFINIÇÃO ATIVA:** linhas abaixo, combinadas ao contrato transversal de GIVEN/WHEN/THEN. Todos os documentos `01–13` devem **referenciar** estes casos, não redefini-los; listas antigas no `05` e na seção R1 acima são registros históricos SUPERADOS. **Estado de todos: ESPECIFICADO CONCEITUALMENTE, NÃO EXECUTADO.** Em nenhum caso a presença do ID comprova PASS. Fila no bloco/gate indicado. Fluxos reais 401/403/409/422 são expectativas sujeitas a contrato HTTP final; observar resultado e ausência de mutação como oráculo.
++
++**Pré-condições transversais:** ambiente local isolado e limpo; clock injetável; fixtures fictícias imutáveis E1–E10 (e outras por módulo conforme contrato), versões e memberships identificados; sessão/papel/entitlement pertinentes; banco de testes do bloco futuro. **GIVEN** = pré-condição indicada na tabela; **WHEN** = ação; **THEN** = resultado esperado verificável. **Evidência** = dados anonimizados, comandos+exit codes, event log e comparação de estado; quando algum requisito estiver pendente de decisão, oráculo final fica condicionado ao gate e não passa automaticamente.
++
++| ID / nome | Requisito | Bloco | GIVEN / fixture | WHEN | THEN | Evidência futura / gate |
++| --- | --- | --- | --- | --- | --- | --- |
++| `EDT-01` — Draft oculto | RF03 | D/F | E9 em rascunho | consultar rota pública/lista | não expor E9:404 e nenhuma linha | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-02` — Revisão publicada isolada | RF03 | D/F | E4 v2 publicada e v3 em revisão | ler lista e detalhe | ambos usam apenas o snapshot v2 | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-03` — Rejeição auditável | RF03 | D | E8 revisão v2 submetida | revisor rejeita com motivo | rejeição persistida, v1 pública inalterada | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-04` — Concorrência de revisão | RF03 | D | E1 v1 e dois editores leem versão idêntica | ambos salvam revisões condicionais | uma atualização aceita, outra 409, nenhum overwrite | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-05` — Imutabilidade na restauração | RF03 | D | E2 versões v1/v2 e restaurador autorizado | restaurar conteúdo histórico | criar v3; v1/v2 e audit trail intactos | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-06` — Separação de papéis | RF03 | C/D | editor sem papel publisher | tenta publicar revisão aprovada | 403 e nenhuma troca de published_revision_id | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-07` — Retificação ainda não publicada | RF03 | D/F | E4 v2 pública e v3 retificação pendente | consultar lista/detalhe/filtros | somente v2 exibida em todas as projeções | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-08` — Correção de PII em trilha | RNF04 | G/V | evento com PII de teste e política ratificada | solicitar tratamento | redaction/tombstone controlado, retenção do evento minimizado | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-09` — Restauração formal | RF03 | D | E2 v2 publicado, autor autorizado | submeter restauração para revisão/publicação | aprovação gera v3 com link a v1 e evento único | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-10` — Edição pública bloqueada | RF03 | D/F | E4 v2 publicada | editor muda docs/prazo em rascunho v3 | digest público inalterado até aprovação | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-11` — Publicação concorrente | RF03 | D | E8 revisão aprovada, dois publishers e expectedVersion igual | ambos publicam simultaneamente | exatamente um commit e um 409; evento único | snapshot, event-log sanitizado, transação/versões; D/F |
++| `EDT-12` — Rejeição preserva ponteiro público | RF03 | D | E8 v1 publicada e candidata v2 | revisor rejeita candidata | ponteiro segue v1, decisão auditável | snapshot, event-log sanitizado, transação/versões; D/F |
++| `TIM-01` — Publicado expirado | RF01 | E/F | E2 vencido e publicado | avaliar relógio de teste | estado encerrado; não arquivado | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-02` — Suspensão prevalente | RF01 | D/F | E3 prazo futuro e suspensão ativa | calcular status | suspenso e sem declaração enganosa de aberto | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-03` — Prorrogação como histórico | RF03 | D/F | E4 prazo atualizado com prova oficial | calcular status | aberto + indicador de prorrogação; histórico intacto | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-04` — Prazo ausente | RF03 | D/F | E5 sem fim e sem fonte afirmando continuidade | calcular status | desconhecido; CTA pede confirmar fonte | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-05` — Fonte indisponível | RNF06 | D/F | E4 com último prazo e fonte unavailable | ler detalhe | preservar último prazo rotulado não revalidado | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-06` — Limite temporal exato | RF01 | E/F | E8 encerramento com instante explícito UTC | avaliar antes/no/depois da fronteira | inclusividade segue decisão D-12; nenhum estado ambíguo | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-07` — Virada de timezone | RF01 | E/F | E1 com zona IANA, relógios em transição | variar instante UTC ao redor do dia local | status resulta de instantes e zona declarada | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-08` — A iniciar e outros eixos | RF01 | E/F | E6 futuro, E3 suspenso, E4 prorrogado | renderizar resultados | a iniciar / suspenso / aberto prorrogado separadamente | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-09` — Suspensão revertida | RF01 | D/F | E3 suspenso e fonte autoriza reabrir | registrar evento de reversão | estado recalculado, sem apagar suspensão | instantes UTC/IANA + texto original + snapshot; D/F |
++| `TIM-10` — Data sem hora | RF03 | D/F | E7 somente data 12/11 e zona IANA | avaliar próximo à meia-noite | não inventar 23:59:59; incerteza explicada sob D-12 | instantes UTC/IANA + texto original + snapshot; D/F |
++| `SRC-01` — Link inválido | RNF06 | D/F | URL oficial fictícia inválida | abrir detalhe | sinalizar destino indisponível | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-02` — Domínio alterado | RNF06 | D/F | URL mudou desde última revisão | checagem manual | exigir prova oficial; não aprovar sem fonte | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-03` — Erro de checagem | RNF06 | D/F | fonte temporariamente indisponível | registrar tentativa | não contar conclusão; manter prova anterior | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-04` — Fonte com edital pendente | RNF06 | D/F | fonte A verificada e E-A2 sem check | fechar dia | source coverage 100% parcial vs edital coverage <100%; RNF06 FAIL | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-05` — Revisão detectada | RNF06 | D/F | edital mudou em fonte oficial | registrar divergência | criar revisão pendente, não trocar snapshot | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-06` — Falha em fonte mantém status | RNF06 | D/F | fonte B indisponível e prazo antigo | consultar detalhe | mostrar última checagem não revalidada | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-07` — Corte diário e atraso | RNF06 | D/F | fonte concluída após fim da janela | fechar dia anterior | dia anterior FAIL, sem reclassificação retroativa | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `SRC-08` — Cobertura por edital | RNF06 | D/F | 6 editais em 3 fontes | calcular ambas coberturas | numeradores independentes e logs por edital | registros com fonte/edital, relógio, evidência, contagens; D/F |
++| `DED-01` — Suspeita não mescla | RF01 | D | dois candidatos semelhantes | processar possível duplicidade | fila de revisão; nenhum merge automático | request/response + trace + estado versionado; D |
++| `DED-02` — Título repetido válido | RF01 | D | duas instituições com título igual | deduplicar | preservar ambos Edital.id | request/response + trace + estado versionado; D |
++| `AUTH-01` — Visitante não gerencia admin | RNF04 | C/D | visitante anônimo | POST /admin/edital | 401/403 sem mutação | request/response + trace + estado versionado; C/D |
++| `AUTH-02` — Usuário não autorizado por empresa | RNF04 | G | U sem membership A | GET dado A | 403/404 e nenhuma informação | request/response + trace + estado versionado; G |
++| `AUTH-03` — Membership revogado | RNF04 | G | U antigo membro A | consulta de contexto A | DENY mesmo com token antigo | request/response + trace + estado versionado; G |
++| `AUTH-04` — Editor não publica | RNF04 | C/D | Editor ativo sem publish | publicar revisão | 403 e evento mínimo | request/response + trace + estado versionado; C/D |
++| `AUTH-05` — Self-approval não autorizado | RNF04 | D | Editor da revisão | tenta aprovar | 403 quando quatro-olhos ratificado | request/response + trace + estado versionado; D |
++| `AUTH-06` — Troca de org indevida | RNF04 | G | U membro A sem B | substituir org_id por B | 403/404; sem acesso cross-tenant | request/response + trace + estado versionado; G |
++| `AUTH-07` — Convite alterado | RNF04 | G | U com convite para A | trocar id de destino | denegar e auditar | request/response + trace + estado versionado; G |
++| `AUTH-08` — Privilégio expirado | RNF04 | G | papel removido | reutilizar sessão antiga | permissão recalculada e DENY | request/response + trace + estado versionado; G |
++| `AUTH-09` — Auditoria somente leitura | RNF04 | C/D | audit_reader | tentar editar/exportar fora de escopo | 403 e trilha de tentativa | request/response + trace + estado versionado; C/D |
++| `AUTH-10` — Permissão por objeto | RNF04 | D | Publisher fora do escopo | publicar edital indevido | negação, sem ponteiro publicado | request/response + trace + estado versionado; D |
++| `AUTH-11` — Anti-enumeração e abuso separados | RNF04 | C/G | usuários/convites fictícios | executar fases A/B separadas | classes indistinguíveis na A; limite efetivo sem vazamento na B | request/response + trace + estado versionado; C/G |
++| `AUTH-12` — Consulta auditada | RNF04 | C/D | audit_reader com escopo limitado | abrir eventos sensíveis | mascarar campos; leitura registrada | request/response + trace + estado versionado; C/D |
++| `BIL-01` — Checkout não concede | RF05/RF06 | M | plano Pro só selecionado | abrir checkout | sem benefício pago | request/response + trace + estado versionado; M |
++| `BIL-02` — Confirmação válida libera | RF05/RF06 | M | BillingEvent verificado | confirmar pagamento simulado | ENT concede ao sujeito correto | request/response + trace + estado versionado; M |
++| `BIL-03` — Pagamento recusado | RF05/RF06 | M | attempt refused | consultar direitos | permanece Free | request/response + trace + estado versionado; M |
++| `BIL-04` — Replay idempotente | RF05/RF06 | M | mesmo eventId | reentregar 2 vezes | única transição | request/response + trace + estado versionado; M |
++| `BIL-05` — Webhook falso | RF05/RF06 | M | assinatura de evento inválida | enviar evento fictício | rejeitar sem liberar | request/response + trace + estado versionado; M |
++| `BIL-06` — Concorrência pagamentos | RF05/RF06 | M | dois eventos simultâneos | processar ambos | estado comercial consistente | request/response + trace + estado versionado; M |
++| `BIL-07` — Cancelamento repetido | RF05/RF06 | M | assinatura ativa | cancelar duas vezes | efeito idempotente auditado | request/response + trace + estado versionado; M |
++| `BIL-08` — Downgrade e cota | RF05/RF06 | M | usuário com >3 salvos | aplicar downgrade | sem apagar pessoal; bloquear novos | request/response + trace + estado versionado; M |
++| `BIL-09` — PII não vaza | RF05/RF06 | M | empresa com CNPJ de teste | consultar logs | mascarar identificadores | request/response + trace + estado versionado; M |
++| `BIL-10` — Sem serviços externos | RF05/RF06 | M | gateway simulado local | executar fluxo | zero chamadas externas | request/response + trace + estado versionado; M |
++| `ENT-01` — Free concorrente | RF04 | H/L/M | 2/3 favoritos, duas gravações | salvar ambas | uma aceita, final 3 | request/response + trace + estado versionado; H/L/M |
++| `ENT-02` — Contexto multiempresa | RF04 | H/L/M | membro A Pro e B Free simulado | alternar A/B | escopo A não eleva B | request/response + trace + estado versionado; H/L/M |
++| `ENT-03` — Sem confirmação não libera | RF04 | H/L/M | escolha plano Pro sem evento | salvar quarto | negado; só conceder no contexto após M | request/response + trace + estado versionado; H/L/M |
++| `PERF-01` — Primeira página pronta em até 2s | RNF01 | E/V | 5000 ativos, datasets e cache controlados | medir renderização, ordem, filtros e interatividade | P95 da lista pronta ≤2000ms por cenário proposto; LCP isolado não aprova | trace E2E + time series + CSV + seed hash; E/V |
++| `PRIV-01` — Minimização e exclusão | RNF04 | G/V | dados pessoais sintéticos com motivo legal | solicitar exclusão | atender política; reter só o permitido | request/response + trace + estado versionado; G/V |
++| `PRIV-03` — Escopo auditor privado | RNF04 | C/D | audit_reader sem escopo PII | consultar payload | redaction e acesso negado se fora escopo | request/response + trace + estado versionado; C/D |
++| `LOG-01` — Não vazar segredo | RNF04 | C/V | requests com PII e token fictícios | registrar logs de erro | segredos ausentes nos logs | request/response + trace + estado versionado; C/V |
++
++**Inventário completo:** famílias EDT, TIM, AUTH, SRC, DED, ENT, BIL, PERF, PRIV e LOG; intervalos genéricos usados nos roteiros (`AUTH-01..10`, `BIL-01..10` etc.) referem-se exatamente aos códigos acima. Novos IDs não são criados por menção a uma família. Qualquer teste sem fixture ou oráculo aprovado permanece **condicionado**, mesmo catalogado. Casos de segurança não são prova de segurança dinâmica, e casos de produção não comprovam conformidade regulatória.
++
++#### Mapeamento histórico sem colisão
++
++| Referência histórica | Significado histórico / origem | ID ativo | Tratamento |
++|---|---|---|---|
++| `EDT-04`, 05 §7 v0.2 | Duas revisões concorrentes | `EDT-04` | preservado |
++| `EDT-04`, 11 R1 v0.2 | Editar conteúdo não aprovado e checar público | `EDT-10` | novo ID, sem redefinir EDT-04 |
++| `EDT-07`, 05 §7 v0.2 | Retificação não publicada | `EDT-07` | preservado |
++| `EDT-07`, 11 R1 v0.2 | Dois publicadores simultâneos | `EDT-11` | novo ID |
++| `EDT-08`, 05 §7 v0.2 | PII e audit trail | `EDT-08` | preservado |
++| `EDT-08`, 11 R1 v0.2 | Revisão rejeitada em E8 | `EDT-12` | novo ID |
++| `TIM-06`, 05 §3 v0.2 | Limite temporal exato | `TIM-06` | preservado |
++| `TIM-06`, 11 R1 v0.2 | Prazo apenas data | `TIM-10` | novo ID |
++| `TIM-07`, 05 §3 v0.2 | Virada de timezone | `TIM-07` | preservado |
++| `TIM-07`, 11 R1 v0.2 | Instante exato de fim | `TIM-06` | reuso do significado canônico, sem redefinição |
++
++As origens históricas constam nos pacotes v0.1/v0.2 preservados e no diff R2. O teste de unicidade de significados é documental e será refeito na auditoria R2.
++
++## R2 — Protocolo AUTH-11 segregado (R1-04)
++
++**R1-04 — uma identidade canônica com subfases `AUTH-11A` e `AUTH-11B`; executadas separadamente no futuro.** O objetivo de A é anti-enumeração, o de B é resistência a abuso. **Não misturar amostras.** `AUTH-11` somente passa se A e B passarem. Decisão sobre limites permanece pendente D-07/segurança do gate C/G.
++
++| Fase | GIVEN | WHEN | THEN / oráculo verificável | Evidências |
++|---|---|---|---|---|
++| A — comparação | Ambiente local isolado, mesma versão de banco e sessão; 2 contas presentes/2 ausentes, 2 convites ativos/2 inexistentes, todos `example.test`; buckets de rate limit isolados e reiniciados simetricamente entre amostras | Executar **40 amostras por classe** em ordem intercalada e embaralhada com seed registrada; reset lógico antes de cada par; comparar rotas equivalentes de recuperação/convite | respostas públicas da mesma família com códigos HTTP, corpo e tamanho normalizados; mensagens não revelam identidade; timing sem separação sistemática sob limiar estatístico **proposto**, a ratificar | CSV com seed, code, body hash, payload_size, duração monotônica, ambiente, nenhum token/PII |
++| B — proteção contra abuso | Novos buckets de teste; limite candidato **5 requisições/15 min** POR IP+rota+hash sujeito normalizado, *não aprovado*; contas de teste simétricas; clock congelável | enviar `limite+1` tentativas e avançar relógio para recuperação; repetir presente/ausente; verificar resets | rate limit responde genericamente `429` ao excesso com recuperação consistente; não revelar identidade/convite; sem bloquear indevidamente outra conta legítima na mesma chave conforme política ratificada | respostas e 429, timestamps, chaves sanitizadas, contador, reinicialização demonstrada |
++
++**Métrica timing A:** comparar mediana e P95 de cada classe com estratificação por latência de rede; propor equivalência operacional de diferença absoluta de mediana e P95 de no máximo `max(50ms, 10% do tempo de referência)` entre pares comparáveis, exigindo IC de 95% para diferença contido nessa margem sob bootstrap pré-registrado. **Limiar experimental a ratificar**, não prova de ausência de side-channel nem garantia para produção; não declarar indistinguível apenas por não-significância estatística. Requisito objetivo de aceitação deve ser ratificado antes C/G; se não houver amostras suficientes, `NÃO VERIFICADO`. Não desativar proteção em ambientes reais; isolamento é condição experimental. Limitações técnicas de reset e política de abusos são pendentes, não inventadas como atendidas. Cenários de tokens existentes/inexistentes devem seguir mesmo tratamento público antes de prova de posse. `AUTH-11A/B` são subcasos, não IDs de testes de outras famílias.
++
++## R2 — Contrato de PERF-01 lista efetivamente pronta (R1-05)
++
++**R1-05 — PROPOSTA para D-23 e gate E, não métrica aprovada pelo DOCX.** `navigation_start → catalog_ready`: instante monotônico em navegador E2E quando **a primeira página correta** contém o número esperado de linhas e IDs, títulos, instituições, datas/prazos e ordenação correspondentes a oráculo derivado do seed; filtros selecionados aparecem refletidos; requisição sem erro; skeletons encerrados; componentes e controles essenciais hidratados e operáveis por teclado; nenhum placeholder tomado por dado real. DevTools/trace registram `catalog_ready`, não uma promessa isolada de `data-ready=true`: o E2E deve verificar DOM e conteúdo contra expected JSON **antes** de aceitar o marco. Invalida ready se filtros/linhas mudarem indevidamente após o evento.
++
++**Oráculo**: fixture determinística de 5.000 `Edital.id` ativos (publicação e status definidos explicitamente), 20 instituições, 12 setores, 6 estágios, 5 modalidades, prazos/zonas variados. Seed SHA-256, paginação aprovada (ex. 25/50 por página), ordenação total incluindo tie-break por `edital_id`. Cenários: inicial; título; instituição; 2 e 4 filtros; sem resultados; primeiro, intermediário, última página; ordenação prazo, valor e nome; desktop 1440×900 e mobile 390×844. Para cada cenário, validar IDs/ordem/cardinalidade contra consulta-oráculo independente sem confiar na contagem do browser.
++
++**Ambiente e execução futura:** CPU modelo/cores e RAM, armazenamento, versões OS/Node/PG/Next/browser, Docker/host, perfil de throttling, rede loopback sem externas, recursos limitados, estado do cache separado frio/quente (cold browser cache não necessariamente cold DB), warmups=5 **não contabilizados**, 30 amostras válidas por cenário/viewport, concorrência 1 e 10 em lotes separados, ordem das consultas intercalada, tempos monotônicos e no mínimo um cold-start reprodutível. **Critério de aprovação proposto**: P95(`catalog_ready` − `navigation_start`) ≤ **2.000ms para cada cenário, viewport e concorrência de referência aprovada**, sem falhas 5xx, placeholder falso ou dados incorretos; timeout/erros contam FAIL (não filtrar amostras ruins). TTFB, LCP, DCL, SQL, EXPLAIN e tamanho de resposta são auxiliares; LCP menor que 2s **não** aprova. `99,5%` (RNF02) somente produção, não inferível localmente.
++
++**Negativo obrigatório:** cabeçalho em 500ms, LCP em 700ms, linhas corretas em 3000ms → `catalog_ready=3000ms` → **FAIL**, mesmo que LCP passe. Evidências futuras CSV/JSON por amostra (tempo, contexto, hash seed, IDs esperados/observados), trace Playwright, screenshot, configuração hardware e comandos realmente existentes com códigos de saída; se script não existir, marcar não executado, nunca inventar comando bem-sucedido. Escopo de execução previsto: E e V, **não neste Bloco 0**.
++
++## R2 — Gate de checagem diária (R1-01)
++
++Casos `SRC-04`, `SRC-07` e `SRC-08` estão no catálogo R2. GIVEN F(d) com 3 fontes e E(d) com 6 editais, WHEN A é conferida e A1 é validado mas A2 não, THEN `source_coverage` pode permanecer `3/3`, enquanto `edital_coverage=5/6`, `RNF06=FAIL` e A2 entra em `edital_overdue_count`. Evidence futura: universo versionado, checks fonte+edital, relógio IANA, resultados e log de escalonamento. Ver relatório `04-MATRIZ-RNF06.md`; nenhuma execução funcional.
++
++## R2 — Inventário formal E1–E10 e rastreio por revisão (R1-03)
++
++**Fonte normativa das fixtures:** tabela do relatório `corretivos/bloco-0/R2/03-FIXTURES-MVP1.md` incorporada como matriz detalhada. Contagem: **10 Edital.id distintos = 8 publicados E1–E8 + 2 rascunhos E9–E10**; E8/v2 rejeitada é revisão do E8, não novo Edital; publicação concorrente é em branch de cenário isolado. Relógio base `2026-11-10T12:00:00-03:00`, timezones IANA/precisão explícitos, URLs `.example.invalid`. Cenários vinculados EDT-01,04,07,09,10,11,12 e TIM-01..10 no catálogo R2. Fixtures são plano futuro e gate necessita resultados/trace/DB reais.
+--- a/docs/bloco-0/12-ROADMAP-REVISADO.md
++++ b/docs/bloco-0/12-ROADMAP-REVISADO.md
+@@ -1,8 +1,8 @@
+ # 12 — Roadmap revisado, dependências e fronteiras
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+-
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -327,3 +327,16 @@
+ **Divisões para deliberação, sem execução antecipada:** D1 entidades/revisões, D2 CRUD, D3 revisão/publicação/auditoria; M1 planos/eventos simulados, M2 checkout/conciliador; N1 membros/papéis, N2 operação de assessoria; T1 isolamento instituição/formulários, T2 submissões; U1 avaliação, U2 decisões/recursos/pós-seleção. Cada subgate preserva testes do bloco original e aprovação humana.
+ 
+ **Bloqueio principal:** nenhuma etapa posterior pode começar apenas porque o documento cita `PROPOSTA`. A classificação de gates é planejamento, nunca autorização. Bloco A permanece não iniciado.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — Gates de checagem diária e métrica de listagem (R1-01/R1-05)
++
++- **Bloco D (D-11):** confirmar contrato `F(d)`/`E(d)`, responsáveis e regime de plantão; implementar registros atômicos de evidência por fonte e edital; não declarar checagem diária por page view da fonte. **Bloco F/Gate MVP1:** demonstrar dia `source_coverage=100%`, `edital_coverage<100%` e reprovação objetiva; proteger transparência de frescor ao visitante. **Bloco R:** futura ingestão assistida não altera denominador nem substitui validação humana de alterações críticas.
++- **Bloco E (RNF01/PERF-01):** ratificar métrica funcional `catalog_ready`, oráculo de IDs/ordenação e hardware/cenários antes do benchmark; sob linhas após 3s, reprovar mesmo com LCP baixo. **Bloco V:** repetir em ambiente local de referência documentado. RNF02 de 99,5% continua exclusivamente verificável em produção. Nenhum gate foi aprovado nesta correção.
++
++## R2 — Dataset inequívoco Gate MVP 1 (R1-03)
++
++O Gate após F usa `E1..E10` como **dez editais distintos**, E1–E8 publicados, E9–E10 rascunhos; `E8/v2` rejeitada é revisão, não 11.º edital. A matriz completa `Fixture → revisão → teste → oráculo`, relógio-base e transições em `corretivos/bloco-0/R2/03-FIXTURES-MVP1.md`. A autorização de teste/execução só acontece em D–F e gate explícito, não nesta etapa.
+--- a/docs/bloco-0/13-AUTO-CHECAGEM-DO-PACOTE.md
++++ b/docs/bloco-0/13-AUTO-CHECAGEM-DO-PACOTE.md
+@@ -1,8 +1,8 @@
+ # 13 — Auto-checagem do pacote do Bloco 0
+ 
+-> **Documento de proposta para auditoria, versão 0.2-R1 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
++> **Documento de proposta para auditoria, versão 0.3-R2 · 26/10/2026.** Apenas o Bloco 0. As seções marcadas **PROPOSTA**, **PREMISSA** e **DECISÃO PENDENTE** não constituem autorização de implementação, contrato congelado ou política comercial aprovada.
+ 
+-**Aviso R1:** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado.
++**Registro histórico R1 (não normativo onde substituído por R2):** versão derivada do pacote v0.1, corrigida sob AUD-01–AUD-15. Todas as definições de R1 são **PROPOSTAS CONDICIONAIS**, não decisões aprovadas; a matriz D-01–D-28 em `03-DECISOES-E-CONFLITOS.md` prevalece como índice de gates. Nenhuma migração, implementação ou aceite foi executado. **Se houver divergência de testes, prevalece exclusivamente o catálogo R2 em `11-TESTES-E-GATES.md`.**
+ 
+ **Convenção de rastreabilidade:** `ORIGINAL` = conteúdo sustentado pelos anexos primários; `PROPOSTA` = desenho técnico; `PREMISSA` = hipótese; `DECISÃO PENDENTE` = aprovação requerida; `CONFLITO` = tensão entre fontes/planos. Referências: `REQ` (DOCX, página/seção), `ID` (PDF, página), `P02` e `P01` (planos mestres, seção).
+ 
+@@ -101,3 +101,42 @@
+ **Auto-checagem R1 obrigatória:** verificar presença dos 14 documentos, RF01–RF10, RNF01–RNF06, D-01–D-28, AUTH-11, PERF-01, ENT-01..03, EDT-04/07, TIM-06/07, notificações contextuais, modelo revisional, matriz única e ZIP com CRC/hashes; conferir 15 achados. Falhas são registradas como `FAIL`, não tornadas `PASS` por reescrever documentação. Resultados reproduzíveis constam em `corretivos/bloco-0/R1/04-VALIDACAO-CRUZADA.md` e `05-EVIDENCIAS-E-INTEGRIDADE.md`.
+ 
+ **Status R1:** pronto para **reauditoria independente COM RESSALVAS** após integridade do ZIP, e **NÃO APROVADO**. Ações não executadas: aplicação, migrations, teste real de concorrência/benchmark, rotina diária real, compliance LGPD, gateways, deploy, commit e gate humano. O próximo auditor deve testar coerência e efeitos de ambas alternativas D-02/D-26; não aceitar apenas este checklist como prova independente.
++
++### R2 — IDs de testes (R2)
++
++**Nota normativa R2 (IDs):** Todas as menções a `EDT-*`, `TIM-*`, `AUTH-*`, `SRC-*`, `DED-*`, `ENT-*`, `BIL-*`, `PERF-*`, `PRIV-*`, `LOG-*` são referências; a definição de teste, suas fixtures e seu oráculo estão exclusivamente em `11-TESTES-E-GATES.md` §R2. Ocorrências antigas não prevalecem sobre o catálogo.
++
++## R2 — Auto-validação dos 28 critérios do corretivo (não certifica execução)
++
++**Auto-verificação DOCUMENTAL, não auditoria independente nem execução de aplicação.** Os itens de integridade ZIP/diff/hashes possuem resultado final registrado no relatório 08, confirmado depois do empacotamento. Um PASS aqui significa presença/coerência documental/arquivos, não teste funcional.
++
++| # | Condição | Estado do momento | Evidência / limitação |
++| --- | --- | --- | --- |
++| 01 | 14 docs e arquivos não vazios | PASS | inventário local docs/bloco-0 |
++| 02 | 2 planos preservados byte-a-byte | PASS | SHA-256 comparado com v0.2 |
++| 03 | 7 achados com tratamento e evidência | PASS | 01-MATRIZ-RESOLUCAO-R2 |
++| 04 | F(d) e E(d) independentes | PASS | 05 §R2 + 04-MATRIZ-RNF06 |
++| 05 | RNF06 falha com A2 sem check | PASS | simulação 03/11: 3/3 e 5/6 FAIL |
++| 06 | EDT/TIM canônicos sem redefinições ativas | PASS | 11 §R2 + mapeamento histórico |
++| 07 | 10 Edital.id distintos | PASS | 03-FIXTURES E1..E10 |
++| 08 | Revisão rejeitada fora da contagem | PASS | E8/v2 não é Edital |
++| 09 | AUTH-11 A/B independente | PASS | 11 §R2 |
++| 10 | PERF-01 observa primeira página correta | PASS | 11 §R2 catalog_ready |
++| 11 | Duas jornadas de checkout documentadas | PASS | 09 §R2 e 05-CHECKOUT-ALTERNATIVAS |
++| 12 | D-02/D-26 seguem pendentes | PASS | 03 §R2 e quadro de decisões |
++| 13 | Manifesto distingue as três versões | PASS | 00 §1 e §R2 |
++| 14 | 28 decisões D-01 a D-28 preservadas | PASS | 03 §Matriz autoridade |
++| 15 | 10 RF originais preservados | PASS | 01 §2 |
++| 16 | 6 RNF originais preservados | PASS | 01 §3 |
++| 17 | Identidade visual original preservada | PASS | 08 e PDF sem alterações; licença não verificada |
++| 18 | Nenhuma dependência circular nova introduzida | PARCIAL | inspeção documental cruzada; independência não auditada |
++| 19 | Snapshot público não alterado | PASS | 05 §R1 e 07; sem mutação de regra |
++| 20 | Segregação multiempresa preservada | PARCIAL | especificação mantida; nenhum teste real |
++| 21 | Diff reproduz bytes da v0.3 | PASS | patch --dry-run e apply em cópia temporária; 14/14 arquivos idênticos; relatório 08 |
++| 22 | Hashes do manifesto correspondem | PASS | 13/13 verificados; relatório 08 |
++| 23 | Manifesto sem auto-hash | PASS | 00 excluído da própria tabela; relatório 08 |
++| 24 | ZIP passa CRC | PASS | ZipFile.testzip() após empacotamento, relatório 08 |
++| 25 | Arquivos históricos não sobrescritos | PASS | trabalho em cópia separada |
++| 26 | Nenhuma decisão humana aprovada | PASS | estados explicitamente pendentes |
++| 27 | Nenhum software implementado | PASS | inventário de tipo MD/diff/planos apenas |
++| 28 | Nenhum trabalho Bloco A iniciado | PASS | nenhuma ação de projeto prevista/executada |
