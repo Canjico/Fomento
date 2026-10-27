@@ -28,3 +28,50 @@ Inspecionar repositório Git e commit informado separadamente no relatório de e
 ## Limites
 
 O implementador **não** realiza a auditoria neste pacote. Sem push/PR/deploy; não implementar B antes de gate humano.
+
+## Atualização do handoff — 27/10/2026
+
+### Repositório e referência
+
+- GitHub: Canjico/Fomento (privado).
+- Branch: feat/bloco-a-fundacao-local.
+- Pull Request: https://github.com/Canjico/Fomento/pull/1
+- PR em rascunho, sem merge.
+- O histórico da main foi incorporado à branch.
+- Evidências locais: docs/bloco-a/07-VALIDACAO-LOCAL-WINDOWS.md.
+
+### Situação atual
+
+Os bloqueios iniciais de npm, Docker e Playwright foram resolvidos no Windows.
+
+Resultados informados pelo executor local:
+- Instalação limpa com npm ci e 0 vulnerabilidades identificadas.
+- ESLint, TypeScript e build aprovados.
+- 4 testes unitários, 2 offline e 3 E2E aprovados.
+- PostgreSQL dev/test conectados.
+- Persistência dev validada após reinício.
+- Rotas /admin, /api/admin e /login retornando 404.
+- Gate EDT-08 aprovado com 61 casos únicos.
+- Docker Compose validado.
+
+### Obrigações da auditoria independente
+
+1. Inspecionar código e documentação no commit final.
+2. Reproduzir instalação, build, lint e testes.
+3. Verificar isolamento dos bancos e persistência.
+4. Conferir ausência de migrations e funcionalidades prematuras.
+5. Inspecionar segredos, permissões e configurações.
+6. Revisar EDT-08 e rastreabilidade do Bloco 0.
+7. Avaliar riscos residuais, incluindo imagem PostgreSQL sem digest fixado.
+8. Emitir relatório com achados, severidades, evidências e decisão.
+
+A execução local não constitui aprovação independente.
+
+### Restrições
+
+- Não realizar merge antes do gate de auditoria.
+- Não iniciar o Bloco B antes do aceite definitivo.
+- Não remover funcionalidades ou alterar decisões de produto.
+- Não publicar credenciais, arquivos .env ou dados locais.
+
+---

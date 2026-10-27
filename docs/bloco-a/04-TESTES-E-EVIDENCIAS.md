@@ -1,5 +1,32 @@
 # Testes e evidências — execução real Bloco A (26/10/2026)
 
+## Atualização de validação local — 27/10/2026
+
+**Estado atual:** validação local concluída no Windows. Auditoria independente pendente.
+
+As limitações de instalação, Docker, build e testes documentadas abaixo correspondem ao ambiente original de elaboração em 26/10/2026.
+
+A execução posterior em Windows confirmou:
+
+- `npm ci`: PASS; 0 vulnerabilidades na auditoria npm.
+- ESLint, TypeScript e build: PASS.
+- Vitest: 4/4 testes aprovados.
+- Playwright: 3/3 testes aprovados.
+- Testes offline Node.js: 2/2 aprovados.
+- PostgreSQL de desenvolvimento e testes: conexões validadas.
+- Persistência do PostgreSQL após reinício: PASS.
+- Rotas `/admin`, `/api/admin` e `/login`: HTTP 404.
+- Gate documental: 61 casos únicos, EDT-08 atribuído a G/V.
+- Docker Compose: configuração válida.
+- Git: arquivos sensíveis consultados não rastreados.
+
+Relatório complementar:
+`docs/bloco-a/07-VALIDACAO-LOCAL-WINDOWS.md`
+
+Os resultados locais não substituem a reprodução independente dos testes. O Bloco A permanece sem aceite definitivo.
+
+---
+
 ## Ambiente e metodologia
 
 Executados na pasta `fomento` deste ambiente de elaboração: Node v22.16.0, npm 10.9.2, Git 2.47.3. **Docker CLI indisponível**. Registry npm inacessível; a tentativa de lockfile expirou sem retorno útil. Todos os códigos abaixo representam **comandos executados**, exceto verificações indicadas como não executadas. Logs brutos estão em `artifacts/bloco-a/run-reports/` **no ZIP de entrega**, gerados separadamente do histórico Git.
