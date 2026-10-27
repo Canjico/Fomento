@@ -33,14 +33,22 @@ function Invoke-Check {
     $slug = ($Title -replace "[^A-Za-z0-9-]", "-").ToLowerInvariant()
     $log = Join-Path $folder ($slug + ".log")
     $code = 1
+    $previousErrorActionPreference = $ErrorActionPreference
+    Write-Host ("[INICIANDO] {0}" -f $Title) -ForegroundColor Cyan
     try {
-        # Redirecionamento evita expor o .env; nenhum comando imprime segredos intencionalmente.
+        # Windows PowerShell 5.1 pode converter mensagens normais no stderr do Git/npm
+        # em NativeCommandError. O codigo de saida do processo e a fonte de verdade.
+        # Apenas neste escopo, manter erros de stderr como nao terminantes e capturar
+        # toda a saida no log para permitir diagnostico posterior.
+        $ErrorActionPreference = "Continue"
         $global:LASTEXITCODE = 0
         & $Executable @Arguments *> $log
         $code = [int] $LASTEXITCODE
     } catch {
         $_ | Out-String | Add-Content -Path $log -Encoding UTF8
         $code = 1
+    } finally {
+        $ErrorActionPreference = $previousErrorActionPreference
     }
     $state = if ($code -eq 0) { "PASS" } else { "FAIL" }
     $script:checks.Add([pscustomobject]@{
@@ -49,7 +57,11 @@ function Invoke-Check {
     Write-Host ("[{0}] {1}" -f $state, $Title) -ForegroundColor $(if ($code -eq 0) { "Green" } else { "Red" })
     if ($code -ne 0) {
         Write-Host "Ultimas linhas do erro:"
-        Get-Content -Path $log -Tail 14
+        if ((Test-Path $log) -and (Get-Item $log).Length -gt 0) {
+            Get-Content -Path $log -Tail 14
+        } else {
+            Write-Host "Log vazio. Verifique os detalhes no RESUMO.txt."
+        }
     }
     return ($code -eq 0)
 }
