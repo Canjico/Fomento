@@ -19,8 +19,8 @@ export default function Home() {
             <h1 id="hero-title">Onde a <em>inovação</em> encontra recurso<span className="hero__period">.</span></h1>
             <p className="hero__lead">A Fomentoria está preparando um jeito mais claro de descobrir e acompanhar oportunidades de fomento. A plataforma ainda está em construção.</p>
             <div className="hero__actions">
-              <ActionLink href="/#como-funciona">Conheça a proposta <span aria-hidden="true">↗</span></ActionLink>
-              <a className="text-link" href="/#catalogo">Ver situação do catálogo <span aria-hidden="true">↓</span></a>
+              <ActionLink href="#como-funciona">Conheça a proposta <span aria-hidden="true">↗</span></ActionLink>
+              <a className="text-link" href="#catalogo">Ver situação do catálogo <span aria-hidden="true">↓</span></a>
             </div>
             <StatusLabel>Ambiente de demonstração local</StatusLabel>
           </div>

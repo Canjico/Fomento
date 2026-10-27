@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const links = [
   { href: "/#como-funciona", label: "Como funciona" },
   { href: "/#catalogo", label: "Catálogo" },
@@ -10,9 +12,9 @@ export function SiteHeader() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <header className="site-header">
         <div className="site-container site-header__inner">
-          <a className="wordmark" href="/" aria-label="Fomentoria, início">
+          <Link className="wordmark" href="/" aria-label="Fomentoria, início">
             fomentoria<span className="wordmark__point" aria-hidden="true">.</span>
-          </a>
+          </Link>
           <nav className="desktop-nav" aria-label="Navegação principal">
             {links.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
           </nav>
