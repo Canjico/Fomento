@@ -20,6 +20,6 @@
 
 ## Testes e gate
 
-`npm ci`, `npm run verify:static`, `npm run test:offline`, `npm run docs:gate`, `npm run test:e2e`. Revisão manual visual para 375px, 768px, desktop; zoom 200/400% e contraste em estados reais. Novos testes em `tests/e2e/design-system.spec.ts` (incluindo screenshots anexados em 320/375/768/1280 px) e `tests/unit/design-states.test.ts`.
+`npm ci`, `npm run verify:static`, `npm run test:offline`, `npm run docs:gate`, `npm run test:e2e`. Revisão manual visual para 375px, 768px, desktop; zoom 200/400% e contraste em estados reais. Novos testes em `tests/e2e/design-system.spec.ts` (incluindo screenshots anexados em 320/375/768/1280 px) e `tests/unit/design-states.test.tsx`.
 
 **Não conceder aceite B sem auditoria independente, licença e testes reproduzidos em ambiente separado.** O Bloco C permanece bloqueado.
