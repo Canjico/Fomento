@@ -14,3 +14,5 @@ test-results/
 
 # Relatório gerado depois do commit final, incluído no pacote distribuído
 artifacts/bloco-a/run-reports/
+
+next-env.d.ts
