@@ -13,3 +13,10 @@ test("viewport mobile mantém o marco técnico legível", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "Fomentoria" })).toBeInViewport();
 });
+
+test("rotas administrativas e login não estão disponíveis no Bloco A", async ({ request }) => {
+  for (const route of ["/admin", "/api/admin", "/login"]) {
+    const response = await request.get(route);
+    expect(response.status(), `${route} deve retornar 404`).toBe(404);
+  }
+});
