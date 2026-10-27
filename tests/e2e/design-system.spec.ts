@@ -22,8 +22,18 @@ test("pares semânticos de texto cumprem contraste WCAG AA", async ({ page }) =>
   const contrast = await page.evaluate(() => {
     const style = getComputedStyle(document.documentElement);
     const getColor = (name: string) => {
-      const value = style.getPropertyValue(name).trim().replace("#", "");
-      const channels = [0, 2, 4].map((i) => parseInt(value.slice(i, i + 2), 16) / 255);
+      // CSS optimization may shorten #ffffff to #fff in browser styles.
+      const raw = style.getPropertyValue(name).trim();
+      const value = raw.replace(/^#/, "");
+      let hex: string;
+      if (/^[0-9a-f]{3}$/i.test(value)) {
+        hex = [...value].map((digit) => digit + digit).join("");
+      } else if (/^[0-9a-f]{6}$/i.test(value)) {
+        hex = value;
+      } else {
+        throw new Error(`Token ${name} tem cor inesperada: ${JSON.stringify(raw)}`);
+      }
+      const channels = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
       return channels.map((n) => n <= .04045 ? n / 12.92 : ((n + .055) / 1.055) ** 2.4)
         .reduce((sum, n, i) => sum + n * [.2126, .7152, .0722][i], 0);
     };
