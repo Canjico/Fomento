@@ -32,7 +32,7 @@ describe("design system — estados semânticos", () => {
   });
 
   it("chip e campo possuem conteúdo e rótulos sem ação fictícia", () => {
-    const chip = renderToStaticMarkup(createElement(InfoChip, { tone: "accent" }, "Tecnologia"));
+    const chip = renderToStaticMarkup(createElement(InfoChip, { tone: "accent", children: "Tecnologia" }));
     const field = renderToStaticMarkup(createElement(TextField, {
       id: "pesquisa",
       label: "Buscar editais",
