@@ -16,7 +16,7 @@ Não existe dependência de aplicação em módulos de domínio porque **nenhum 
 ## Decisões técnicas deste A
 
 - Next.js App Router como web única; monólito modular, sem serviços remotos.
-- PostgreSQL local futuro com dois bancos em **containers separados**: dev persistente e testes efêmeros. Sem ORM escolhido, sem SQL de domínio e sem migrations.
+- PostgreSQL local validado com dois bancos em **containers separados**: dev persistente e testes efêmeros. Sem ORM escolhido, sem SQL de domínio e sem migrations.
 - `.env` é lido somente em utilitários locais; nenhuma credencial é lida pela página web. Não há autenticação fictícia.
 - `pg` é dependência de infraestrutura para teste de conectividade, não ORM.
 - Playwright E2E contém um oráculo negativo: ausência de botões/links inexistentes.
@@ -27,9 +27,31 @@ As portas host dos containers usam bind `127.0.0.1` (não publicação geral na 
 
 ## Compatibilidade e referências
 
-- Next.js 16.4.3, React 19.3.1: versões estáveis propostas com base em releases de outubro de 2026; **não instaladas**.
-- Node 22.16.0 da máquina: compatível com os mínimos oficiais de Next (>=20.9) e Vitest 5 (>=22.12), mas o projeto não foi compilado.
-- Tailwind v4 via PostCSS; eslint-config-next 16; Vitest 5 e Playwright 1.64.1 são versões **declaradas**, não resolvidas.
-- Docker Compose não está presente no runtime executor. Deverá ser auditado em host compatível.
+### Ambiente validado — Windows, 27/10/2026
+
+- Node.js 24.15.0; npm 11.12.1.
+- Next.js 16.4.3; React 19.3.1.
+- Tailwind CSS v4 e PostCSS.
+- Instalacao limpa com npm ci: PASS.
+- ESLint e TypeScript strict: PASS.
+- Vitest: 4/4 testes aprovados.
+- Playwright Chromium: 3/3 testes aprovados.
+- Testes offline Node.js: 2/2 aprovados.
+- Build de producao: PASS.
+- PostgreSQL 17 Alpine: dev/test conectados.
+- Persistencia do banco dev: validada apos reinicio.
+
+### Riscos e limites
+
+A execucao ocorreu no ambiente local Windows.
+A auditoria independente permanece necessaria.
+
+A imagem postgres:17-alpine utiliza tag mutavel.
+Risco A-RSK-05: baixo, sujeito a reavaliacao antes
+de qualquer ambiente compartilhado ou producao.
+
+Nao existem modulos de negocio, ORM ou migrations de dominio.
+
+Evidencias: docs/bloco-a/07-VALIDACAO-LOCAL-WINDOWS.md.
 
 Fontes de compatibilidade: Next.js https://nextjs.org/docs/app/getting-started/installation; releases Next https://github.com/vercel/next.js/releases; Vitest https://vitest.dev/guide/; Playwright https://playwright.dev/docs/intro; React https://react.dev/versions.

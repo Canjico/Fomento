@@ -2,14 +2,14 @@
 
 ## Pré-requisitos
 
-Node.js >=22.12.0 (Next >=20.9; Vitest 5 >=22.12); npm 10; Docker Engine + Compose v2; acesso à registry npm para instalar dependências; Chromium de Playwright (baixado apenas em host autorizado, no setup técnico).
+Node.js >=22.12.0 (Next >=20.9; Vitest 5 >=22.12); npm 11.12.1; Docker Engine + Compose v2; acesso à registry npm para instalar dependências; Chromium de Playwright (baixado apenas em host autorizado, no setup técnico).
 
 ## Passos em Windows (PowerShell)
 
 ```powershell
 Copy-Item .env.example .env
 # edite .env e substitua DB_PASSWORD por senha local, não versionável
-npm install
+npm ci
 npm run env:check
 docker compose up -d --wait postgres
 npm run db:ping
@@ -29,7 +29,7 @@ npx playwright install chromium
 npm run test:e2e
 docker compose --profile test up -d --wait postgres-test
 npm run db:ping -- --test
-docker compose --profile test down
+docker compose --profile test stop postgres-test
 ```
 
 ## Serviços
@@ -44,7 +44,7 @@ O `.env.example` usa **valores de demonstração**, não credenciais reais. O te
 ## Resolução de falhas
 
 - `docker: command not found`: instalar Docker Desktop/Engine + Compose em host local.
-- `EAI_AGAIN registry.npmjs.org`: verificar DNS/proxy/rede e executar `npm install`; não alegar sucesso sem lockfile e dependências instaladas.
+- `EAI_AGAIN registry.npmjs.org`: verificar DNS/proxy/rede e executar `npm ci`; não alegar sucesso sem lockfile e dependências instaladas.
 - `ECONNREFUSED`: confirmar `docker compose ps`, `.env`, portas, healthcheck e bind localhost.
 - Browser ausente no E2E: instalar Chromium Playwright no host onde se executarão os testes.
 - `.env` ausente: copiar `.env.example`; não colocar segredos em Git.
