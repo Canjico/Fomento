@@ -1,4 +1,4 @@
-name: Bloco A - auditoria automatizada
+name: Fomentoria - auditoria de regressao
 
 on:
   push:
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   fundacao:
-    name: Reproducao independente da fundacao
+    name: Regressao independente A+B
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env:
@@ -60,6 +60,16 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: E2E Chromium
         run: npm run test:e2e
+      - name: Guardar evidencias visuais e relatorio Playwright
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-relatorio-${{ github.run_id }}
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: warn
+          retention-days: 14
       - name: Subir bancos isolados
         run: docker compose --profile test up -d --wait postgres postgres-test
       - name: Verificar conexoes em ambos os bancos

@@ -153,3 +153,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   html { scroll-behavior: auto; }
   .action-link { transition:none; }
 }
+
+/* Componentes de estados e metadados para histórias isoladas de UI, sem lógica de domínio. */
+.info-chip { display: inline-flex; align-items: center; padding: .2rem .65rem; border-radius: 999px; background: #e9eee9; color: #042e2d; font-weight: 700; font-size: .79rem; line-height: 1.55; }
+.info-chip--accent { background: #0a1551; color: #fff; }
+.feedback-state { display: flex; align-items: flex-start; gap: 1rem; border: 1px solid var(--f-color-line); background: #fff; border-radius: var(--f-radius-sm); padding: 1.5rem; }
+.feedback-state__mark { display: inline-grid; place-items: center; background: #e9eee9; color: #042e2d; border-radius: 50%; width: 2.4rem; height: 2.4rem; flex-shrink: 0; font-weight: 800; }
+.feedback-state h3 { font-size: 1.125rem; font-weight: 700; color: var(--f-color-navy); margin: 0 0 .3rem; }
+.feedback-state p { margin: 0; color: var(--f-color-muted); }
+.feedback-state--error { border-color: #aa5545; }
+.feedback-state--error .feedback-state__mark { color: #8b3022; background: #fff0ed; }

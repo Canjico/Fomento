@@ -41,3 +41,35 @@ export function TextField({ id, label, hint, error, className = "", ...props }: 
 export function SectionEyebrow({ children }: { children: ReactNode }) {
   return <span className="section-eyebrow">{children}</span>;
 }
+
+export function InfoChip({ children, tone = "neutral" }: { children: ReactNode; tone?: "neutral" | "accent" }) {
+  return <span className={`info-chip info-chip--${tone}`}>{children}</span>;
+}
+
+/**
+ * Estado sem IO ou efeitos. Permite compor histórias da listagem futura sem
+ * sugerir que os dados já existem ou que algum filtro está funcional.
+ */
+export function FeedbackState({
+  kind,
+  title,
+  description,
+}: {
+  kind: "loading" | "empty" | "error";
+  title: string;
+  description: string;
+}) {
+  return (
+    <div
+      className={`feedback-state feedback-state--${kind}`}
+      role={kind === "error" ? "alert" : "status"}
+      aria-busy={kind === "loading" ? true : undefined}
+    >
+      <span className="feedback-state__mark" aria-hidden="true">{kind === "loading" ? "…" : kind === "error" ? "!" : "—"}</span>
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}

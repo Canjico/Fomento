@@ -18,3 +18,9 @@
 - Visuais em linhas, não cards nem falsos resultados.
 
 O teste de contraste de tokens não mede automaticamente todos os pixels ou pares possíveis. Registrar evidências reais e qualquer limitação antes de liberar o gate.
+
+## Cobertura complementar
+- Vitest inspeciona semântica dos estados reutilizáveis: `status`/ `aria-busy` no carregamento, `alert` no erro, chips não interativos e labels dos campos.
+- Playwright verifica ausência de rolagem horizontal a 320/375/768/1280 px, além dos testes anteriores.
+- Quatro capturas de página completa são anexadas ao relatório HTML no GitHub Actions e servem para revisão humana do layout. Viewport 320 px é um proxy útil de reflow, **não equivale a teste de zoom real a 400%**.
+- A revisão humana de aparência, zoom real, foco e leitor de tela permanece documentada como limitação para aceite.

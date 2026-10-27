@@ -61,3 +61,18 @@ test("Bloco B não expõe painel administrativo ou login", async ({ request }) =
     expect(result.status(), `${path} deve seguir indisponível`).toBe(404);
   }
 });
+
+test("layout sem rolagem lateral em 320, 375, 768 e 1280 px, com evidências visuais", async ({ page }, testInfo) => {
+  for (const width of [320, 375, 768, 1280]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/");
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect.poll(() =>
+      page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)
+    ).toBe(true);
+    await testInfo.attach(`interface-${width}px`, {
+      body: await page.screenshot({ fullPage: true, animations: "disabled" }),
+      contentType: "image/png",
+    });
+  }
+});
