@@ -1,0 +1,82 @@
+name: Bloco A - auditoria automatizada
+
+on:
+  push:
+    branches:
+      - feat/bloco-a-fundacao-local
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fundacao:
+    name: Reproducao independente da fundacao
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      CI: "true"
+      DB_HOST: 127.0.0.1
+      DB_PORT: "54329"
+      DB_TEST_PORT: "54330"
+      DB_USER: fomento_local
+      DB_NAME: fomento_dev
+      DB_TEST_NAME: fomento_test
+      DB_PASSWORD: "ci-only-local-disposable-password"
+    steps:
+      - name: Checkout do PR
+        uses: actions/checkout@v4
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: npm declarado
+        run: npm install --global npm@11.12.1
+      - name: Criar ambiente descartavel de CI
+        run: |
+          cat > .env <<EOF
+          DB_HOST=127.0.0.1
+          DB_PORT=54329
+          DB_TEST_PORT=54330
+          DB_USER=fomento_local
+          DB_NAME=fomento_dev
+          DB_TEST_NAME=fomento_test
+          DB_PASSWORD=ci-only-local-disposable-password
+          EOF
+      - name: Instalar pelo lockfile
+        run: npm ci
+      - name: Verificacoes estaticas, unitarias e build
+        run: npm run verify:static
+      - name: Tests offline e gate documental
+        run: |
+          npm run test:offline
+          npm run docs:gate
+          npm run env:check
+      - name: Navegador de testes
+        run: npx playwright install --with-deps chromium
+      - name: E2E Chromium
+        run: npm run test:e2e
+      - name: Subir bancos isolados
+        run: docker compose --profile test up -d --wait postgres postgres-test
+      - name: Verificar conexoes em ambos os bancos
+        run: |
+          docker compose config --quiet
+          npm run db:ping
+          npm run db:ping -- --test
+      - name: Validar persistencia real no banco dev
+        run: |
+          docker compose exec -T postgres psql -v ON_ERROR_STOP=1 -U fomento_local -d fomento_dev -c "CREATE SCHEMA fomento_a_ci_probe;"
+          docker compose restart postgres
+          docker compose up -d --wait postgres
+          docker compose exec -T postgres psql -v ON_ERROR_STOP=1 -U fomento_local -d fomento_dev -Atc "SELECT EXISTS (SELECT 1 FROM pg_namespace WHERE nspname = 'fomento_a_ci_probe');" | grep -x t
+          docker compose exec -T postgres psql -v ON_ERROR_STOP=1 -U fomento_local -d fomento_dev -c "DROP SCHEMA fomento_a_ci_probe;"
+      - name: Diagnostico apenas em falha
+        if: failure()
+        run: docker compose --profile test ps && docker compose --profile test logs --tail=80 || true
+      - name: Encerrar bancos efemeros
+        if: always()
+        run: docker compose --profile test down --volumes || true
