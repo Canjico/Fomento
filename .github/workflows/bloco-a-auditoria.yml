@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feat/bloco-a-fundacao-local
+      - audit/bloco-b-local-20261028
   pull_request:
     branches:
       - main
