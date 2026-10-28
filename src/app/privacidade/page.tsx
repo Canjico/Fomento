@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Privacidade do protótipo | Fomentoria' };
+export default function PrivacyPage() { return <main className="auth-info-page"><Link href="/cadastro">← Voltar ao cadastro</Link><h1>Privacidade no ambiente local</h1><p>O protótipo armazena nome, e-mail, tipo de conta e um hash da senha, no arquivo privado <code>.local-data/accounts.json</code> da instalação local. A senha em texto puro não é salva. O acesso utiliza cookie de sessão com expiração.</p><p>Não existe confirmação de e-mail, recuperação automática de senha, banco multiusuário ou política operacional de retenção nesta demonstração. Evite informar dados reais sensíveis e nunca publique esse armazenamento na internet.</p><p>Esta explicação é técnica e provisória. Não equivale a uma política de privacidade definitiva nem a uma certificação de conformidade com a LGPD.</p></main>; }

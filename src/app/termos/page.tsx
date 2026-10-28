@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Uso local de demonstração | Fomentoria' };
+export default function TermsPage() { return <main className="auth-info-page"><Link href="/cadastro">← Voltar ao cadastro</Link><h1>Ambiente de demonstração local</h1><p>Esta versão da Fomentoria é um protótipo para desenvolvimento e testes. As contas cadastradas ficam armazenadas apenas na máquina que executa a aplicação.</p><p>Não há cadastro empresarial validado, assinatura, serviço de assessoria, inscrição oficial em editais ou suporte de produção. Os dados de editais e do blog são fictícios e identificados como demonstração.</p><p>Estes avisos não substituem os Termos de Uso definitivos, que ainda precisam de aprovação antes de disponibilizar a plataforma publicamente.</p></main>; }
