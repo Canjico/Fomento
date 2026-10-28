@@ -4,6 +4,8 @@
  * Não introduzir dados de editais como se fossem registros reais.
  */
 
+import Link from "next/link";
+
 type IconName =
   | "search"
   | "arrow-right"
@@ -75,27 +77,27 @@ export default function Home() {
           </a>
           <nav className="lp-nav" aria-label="Navegação principal">
             <a href="#como-funciona">Como funciona</a>
-            <a href="/editais">Editais</a>
-            <a href="/blog">Blog</a>
+            <Link href="/editais">Editais</Link>
+            <Link href="/blog">Blog</Link>
             <a href="#sobre">Sobre o projeto</a>
           </nav>
           <div className="lp-header-actions">
-            <a className="lp-header-search" href="/editais" aria-label="Explorar catálogo de editais">
+            <Link className="lp-header-search" href="/editais" aria-label="Explorar catálogo de editais">
               <Icon name="search" size={20} />
-            </a>
+            </Link>
             <span className="lp-header-divider" aria-hidden="true" />
-            <a href="/login" className="lp-login">Entrar</a>
-            <a href="/cadastro" className="lp-header-cta">Começar agora</a>
+            <Link href="/login" className="lp-login">Entrar</Link>
+            <Link href="/cadastro" className="lp-header-cta">Começar agora</Link>
           </div>
           <details className="lp-mobile-menu">
             <summary aria-label="Abrir menu de navegação"><Icon name="menu" size={23}/></summary>
             <nav aria-label="Navegação para celular">
               <a href="#como-funciona">Como funciona</a>
-              <a href="/editais">Editais</a>
-              <a href="/blog">Blog</a>
+              <Link href="/editais">Editais</Link>
+              <Link href="/blog">Blog</Link>
               <a href="#sobre">Sobre o projeto</a>
-              <a href="/login">Entrar <small>Local</small></a>
-              <a href="/cadastro">Começar agora <small>Local</small></a>
+              <Link href="/login">Entrar <small>Local</small></Link>
+              <Link href="/cadastro">Começar agora <small>Local</small></Link>
             </nav>
           </details>
         </div>
@@ -116,7 +118,7 @@ export default function Home() {
                 Descubra e acompanhe oportunidades de fomento, editais, chamadas e programas que impulsionam ideias, projetos e negócios no Brasil.
               </p>
               <div className="lp-hero-buttons">
-                <a href="/editais" className="lp-button-primary">Explorar editais <Icon name="arrow-right" size={17}/></a>
+                <Link href="/editais" className="lp-button-primary">Explorar editais <Icon name="arrow-right" size={17}/></Link>
                 <a href="#como-funciona" className="lp-button-text">Como funciona <Icon name="arrow-down" size={16}/></a>
               </div>
               <span className="lp-availability-note">Catálogo demonstrativo disponível após login local · inscrições indisponíveis</span>
@@ -202,13 +204,13 @@ export default function Home() {
               <p className="lp-eyebrow">CONTEÚDO</p>
               <h2 id="lp-blog-title">Blog da Fomentoria</h2>
               <p>Análises, guias e notícias sobre editais, financiamento, inovação e desenvolvimento.</p>
-              <a href="/blog" className="lp-blog-soon">Explorar o blog <Icon name="arrow-right" size={15}/></a>
+              <Link href="/blog" className="lp-blog-soon">Explorar o blog <Icon name="arrow-right" size={15}/></Link>
             </div>
             <div className="lp-article-grid">
               {blogPreviews.map((post) => (
                 <article className="lp-article" key={post.title}>
                   <div className="lp-article-image" style={{ backgroundImage: `linear-gradient(0deg, rgba(3,19,41,.16), rgba(3,19,41,.16)), url('${post.image}')` }} role="img" aria-label="Imagem ilustrativa de prévia editorial" />
-                  <div className="lp-article-content"><span className="lp-article-type">{post.kind} · EXEMPLO</span><h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3><p>{post.summary}</p><span className="lp-article-date">Conteúdo demonstrativo</span></div>
+                  <div className="lp-article-content"><span className="lp-article-type">{post.kind} · EXEMPLO</span><h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3><p>{post.summary}</p><span className="lp-article-date">Conteúdo demonstrativo</span></div>
                 </article>
               ))}
             </div>
